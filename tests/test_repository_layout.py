@@ -1,8 +1,12 @@
 from __future__ import annotations
 
 import re
-import tomllib
 from pathlib import Path
+
+try:
+    import tomllib
+except ModuleNotFoundError:  # Python 3.10 compatibility
+    import tomli as tomllib
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED_VERSION = "1.0.0"
@@ -52,4 +56,3 @@ def test_license_is_bsd_three_clause():
     text = (ROOT / "LICENSE").read_text(encoding="utf-8")
     assert text.startswith("BSD 3-Clause License\n")
     assert "Copyright (c) 2026, Ruge Lin" in text
-
