@@ -6,15 +6,16 @@ authors:
   - family-names: Lin
     given-names: Ruge
     affiliation: "The Hong Kong University of Science and Technology (Guangzhou)"
-version: 1.0.0
+version: 1.1.0
 date-released: 2026-08-25
 repository-code: "https://github.com/GoGoKo699/QBM-Representation-Alignment"
 url: "https://github.com/GoGoKo699/QBM-Representation-Alignment"
 license: BSD-3-Clause
 abstract: >-
   Reproducible theory, experiments, and exact preparation-resource analyses for
-  representation alignment in commuting quantum Boltzmann machines, including
-  an independently confirmed weighted sparse-Ising experiment.
+  representation alignment in commuting quantum Boltzmann machines. The archive
+  includes an independently confirmed weighted sparse-Ising experiment and a
+  separate exhaustive supporting study that records a graph-selection boundary.
 keywords:
   - quantum Boltzmann machine
   - Gibbs state

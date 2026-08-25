@@ -4,7 +4,7 @@ Repository URL:
 https://github.com/GoGoKo699/QBM-Representation-Alignment
 
 Release:
-1.0.0 (2026-08-25), BSD-3-Clause
+1.1.0 (2026-08-25), BSD-3-Clause
 
 Primary question:
 How does the interaction graph of a commuting QBM affect finite-budget
@@ -20,7 +20,9 @@ Canonical entry points:
 - experiments/sparse_ising_confirmation/: independent primary experiment.
 - results/confirmatory/: canonical compact result tables.
 - figures/: three main public figures.
-- studies/: supporting mechanism and estimator studies.
+- studies/: supporting mechanism, estimator, and graph-selection-boundary studies.
+- studies/temperature_tree_geometry/: exhaustive temperature-dependent tree study.
+- results/temperature_tree_geometry/: compact tree-temperature summaries and validation.
 
 Primary confirmed effects:
 - target-biased Adam, max-weight problem tree minus chain: +0.325;
@@ -30,11 +32,17 @@ Primary confirmed effects:
 Every primary target has a unique ground state. Success is normalized energy
 gap <= 0.1, which certifies ground-state probability >= 0.9.
 
+Later boundary result:
+- the cooling-power-optimal tree changes with temperature;
+- it gives worse projected target energies than hot-start and forward-KL tree choices on all ten reused development instances at the certification temperature;
+- retained target-state cooling power is therefore not claimed as an operational tree selector.
+
 Important boundaries:
 - the models are commuting and classically tractable at the studied sizes;
 - no quantum advantage or asymptotic scaling is claimed;
 - full graphs remain more trainable than sparse trees;
-- the max-weight tree is an empirically supported design rule, not a universal theorem.
+- the max-weight tree is an empirically supported design rule, not a universal theorem;
+- no adaptive tree-selection algorithm is validated.
 
 Citation:
 - CITATION.md: copy-ready citation and BibTeX.

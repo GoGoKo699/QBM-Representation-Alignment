@@ -14,7 +14,7 @@ except ModuleNotFoundError:  # Python 3.10 compatibility
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED_NAME = "qbm-representation-alignment"
-EXPECTED_VERSION = "1.0.0"
+EXPECTED_VERSION = "1.1.0"
 EXPECTED_URL = "https://github.com/GoGoKo699/QBM-Representation-Alignment"
 EXPECTED_LICENSE = "BSD-3-Clause"
 VALIDATION_RECORDS = {
@@ -22,6 +22,7 @@ VALIDATION_RECORDS = {
     "boundary_geometry": ROOT / "results" / "boundary_geometry" / "validation.json",
     "finite_sample_geometry": ROOT / "results" / "finite_sample_geometry" / "validation.json",
     "partial_alignment_geometry": ROOT / "results" / "partial_alignment_geometry" / "validation.json",
+    "temperature_tree_geometry": ROOT / "results" / "temperature_tree_geometry" / "validation.json",
 }
 REQUIRED_FILES = (
     ".gitattributes",
@@ -39,6 +40,10 @@ REQUIRED_FILES = (
     "pyproject.toml",
     "scripts/release_check.sh",
     "src/qbm_alignment/__init__.py",
+    "studies/temperature_tree_geometry/README.md",
+    "studies/temperature_tree_geometry/protocol.md",
+    "studies/temperature_tree_geometry/scripts/validate_study.py",
+    "results/temperature_tree_geometry/validation.json",
 )
 TEXT_SUFFIXES = {".cff", ".json", ".md", ".py", ".toml", ".txt", ".yaml", ".yml"}
 EXCLUDED_RUNTIME_DIRS = {".git", ".venv", ".pytest_cache", "__pycache__", "build", "dist"}

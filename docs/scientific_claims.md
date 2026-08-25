@@ -39,20 +39,21 @@ $$
 
 The omitted-cost covariance term is zero only when the target Hamiltonian lies completely in the ansatz feature span. This supplies a representation-level explanation for the empirical chain/tree/full ordering.
 
-## Supporting mechanism studies
+## Supporting mechanism and boundary studies
 
 The supporting studies establish narrower results:
 
 - coordinatewise Adam can develop transverse parameter drift and concentrate on a wrong excited boundary state in selected development instances;
 - same-batch sampled Fisher estimates obey an exact finite-sample identity in a fully aligned commuting family;
 - local Fisher blocks approximate full geometry well on a problem tree, but not on the tested width-2 and width-3 cyclic representations;
-- a native chain can fail even under exact natural gradient, showing that optimizer quality cannot repair severe feature mismatch by itself.
+- a native chain can fail even under exact natural gradient, showing that optimizer quality cannot repair severe feature mismatch by itself;
+- the tree maximizing retained target-state cooling power changes with temperature, but that optimum gives worse projected target energies than hot-start or forward-KL tree choices on the tested development corpus.
 
-These mechanism results are not presented as universal explanations of all failures.
+These results are not presented as universal explanations or additional primary confirmations. In particular, the temperature-dependent study rejects retained cooling power as an operational tree-selection objective on its corpus; it does not weaken the prospectively frozen `MAXJ` optimization result.
 
 ## Explicit nonclaims
 
-No result in this repository demonstrates quantum speedup, general NP-hard problem solving, a standard asymptotic barren plateau, or a universally optimal graph-selection rule.
+No result in this repository demonstrates quantum speedup, general NP-hard problem solving, a standard asymptotic barren plateau, a universally optimal graph-selection rule, or a validated adaptive tree-selection algorithm.
 
 ## Research context
 

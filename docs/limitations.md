@@ -20,6 +20,10 @@ The problem tree does not match the full graph. It is a preparation-friendly com
 
 The maximum-absolute-coupling spanning tree is empirically effective in the prespecified ensemble. No theorem establishes its universal optimality for trainability, Gibbs approximation, or preparation–optimization Pareto performance.
 
+## Temperature-dependent tree geometry
+
+A later exhaustive development study finds that the tree maximizing retained target-state cooling power changes substantially with temperature. That geometric optimum is not operationally superior: at the certification temperature it gives a worse projected target-energy gap than both the best hot-optimal tree and the forward-KL-optimal tree on all ten reused instances. The repository therefore does not claim that retained cooling power is a valid adaptive tree-selection objective. See [`studies/temperature_tree_geometry/`](../studies/temperature_tree_geometry/).
+
 ## Logical preparation resources
 
 Conditional-angle and CNOT counts are exact logical accounting under the stated compiler. They do not imply hardware-efficient preparation or robustness to finite rotation precision and noise.

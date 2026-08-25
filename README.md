@@ -73,11 +73,21 @@ The full target graphs have treewidth $3$–$5$ and require 75–159 conditional
 - [Statistical analysis](docs/statistical_analysis.md)
 - [Claim-to-evidence map](docs/evidence_map.md)
 
+## Later graph-selection boundary study
+
+An exhaustive supporting study asks whether a temperature-dependent tree chosen by retained target-state cooling power can improve upon the fixed maximum-weight heuristic. The geometry does reorder strongly, but the operational test fails: at the certification temperature, the cooling-power-optimal tree has a worse projected target-energy gap than both the best hot-optimal tree and the forward-KL-optimal tree on all ten reused development instances.
+
+The study therefore records a boundary rather than extending the primary claim:
+
+> Retained target-state cooling power is not validated as an operational tree-selection objective on the tested corpus.
+
+See [temperature-dependent tree geometry](studies/temperature_tree_geometry/README.md). This later study does not modify the frozen primary comparison or the confirmed `MAXJ` benchmark result.
+
 ## How to cite
 
 GitHub reads [`CITATION.cff`](CITATION.cff) and exposes a **Cite this repository** control on the repository page. Copy-ready citation text and BibTeX are also provided in [`CITATION.md`](CITATION.md).
 
-> Lin, R. (2026). *Representation Alignment in Commuting Quantum Boltzmann Machines* (Version 1.0.0) [Computer software]. GitHub. https://github.com/GoGoKo699/QBM-Representation-Alignment
+> Lin, R. (2026). *Representation Alignment in Commuting Quantum Boltzmann Machines* (Version 1.1.0) [Computer software]. GitHub. https://github.com/GoGoKo699/QBM-Representation-Alignment
 
 When citing a precisely reproduced result, include the release tag or full commit SHA used.
 
@@ -121,14 +131,15 @@ experiments/sparse_ising_confirmation/     primary independent experiment
 studies/boundary_geometry/                 same-state optimizer replay
 studies/finite_sample_geometry/            sampled covariance geometry
 studies/partial_alignment_geometry/        partial-representation study
+studies/temperature_tree_geometry/         exhaustive graph-selection boundary study
 data/certificate_tight_instances/          shared development instances
-results/                                   canonical result tables
+results/                                   canonical compact result tables
 figures/                                   main public figures
 docs/                                      theory, preparation, formats, limits
 tests/                                     fast regression and identity tests
 ```
 
-The supporting studies are not additional primary claims. They document mechanisms and estimator behavior that motivated and contextualize the independent confirmation.
+The supporting studies are not additional primary claims. They document mechanisms, estimator behavior, and tested boundaries that motivated or contextualize the independent confirmation.
 
 ## Installation
 
@@ -178,16 +189,18 @@ Supporting studies can be regenerated individually or together:
 bash scripts/refresh_analysis.sh boundary
 bash scripts/refresh_analysis.sh finite
 bash scripts/refresh_analysis.sh partial
+bash scripts/refresh_analysis.sh temperature
 bash scripts/refresh_analysis.sh all
 ```
 
-These commands use the packaged raw trajectories. Re-running all optimization trajectories is more expensive and is documented separately in [reproducibility](docs/reproducibility.md).
+These commands use packaged data. Re-running the optimization trajectories or the exhaustive tree-temperature calculation is more expensive and is documented separately in [reproducibility](docs/reproducibility.md).
 
 ## Supporting studies
 
 - [Excited-boundary optimizer geometry](studies/boundary_geometry/README.md)
 - [Finite-sample geometry](studies/finite_sample_geometry/README.md)
 - [Partial-alignment geometry](studies/partial_alignment_geometry/README.md)
+- [Temperature-dependent tree geometry](studies/temperature_tree_geometry/README.md)
 
 ## Interpretation limits
 
@@ -197,6 +210,7 @@ The repository does not establish:
 - favorable asymptotic scaling;
 - a standard barren plateau;
 - universal optimality of maximum-weight spanning trees;
+- a validated cooling-power-based adaptive tree selector;
 - hardware-efficient Gibbs-state preparation;
 - universal superiority of natural gradient;
 - frequent excited-boundary traps on arbitrary Ising ensembles.

@@ -20,7 +20,7 @@ python scripts/validate_repository.py
 python -m pytest -q
 ```
 
-The repository validator checks that all four packaged scientific validation records have PASS status and that local documentation links resolve. To recompute the primary scientific record from the stored trajectories and parameter states, run:
+The repository validator checks that all five packaged scientific validation records have PASS status and that local documentation links resolve. To recompute the primary scientific record from the stored trajectories and parameter states, run:
 
 ```bash
 python experiments/sparse_ising_confirmation/scripts/validate_experiment.py
@@ -42,9 +42,10 @@ Supporting studies are intentionally separate because their analysis scripts can
 bash scripts/refresh_analysis.sh boundary
 bash scripts/refresh_analysis.sh finite
 bash scripts/refresh_analysis.sh partial
+bash scripts/refresh_analysis.sh temperature
 ```
 
-Use `bash scripts/refresh_analysis.sh all` to run every maintained analysis in sequence. These commands read the packaged raw trajectories and do not rerun the expensive optimization trajectories.
+Use `bash scripts/refresh_analysis.sh all` to run every maintained compact analysis in sequence. These commands read packaged data and do not rerun the expensive optimization trajectories or the exhaustive tree-temperature calculation.
 
 ## Re-run the primary experiment
 
@@ -59,9 +60,21 @@ python experiments/sparse_ising_confirmation/scripts/validate_experiment.py
 
 The raw logs and compressed parameter-state arrays are written inside the experiment directory. Compact public results are written to `results/confirmatory/`.
 
+## Re-run the exhaustive temperature-tree study
+
+```bash
+python studies/temperature_tree_geometry/scripts/run_exhaustive_study.py --clean-results
+python studies/temperature_tree_geometry/scripts/analyze_results.py
+python studies/temperature_tree_geometry/scripts/validate_study.py
+```
+
+The exhaustive run enumerates all target-supported spanning trees over 61 temperatures for ten $n=8$ development instances. It generates large intermediate arrays and a long-form table locally. These generated intermediates are excluded from ordinary Git history; the repository includes compact canonical summaries, the protocol, validation records, and the figure-generation script.
+
 ## Frozen evidence
 
 `experiments/sparse_ising_confirmation/protocol/frozen_source/` preserves the exact locked protocol and generator source used before the independent instances were generated. These files intentionally retain their original wording and hashes. Maintained scripts outside that directory use the public repository layout.
+
+The temperature-tree study separately preserves its protocol in [`studies/temperature_tree_geometry/protocol.md`](../studies/temperature_tree_geometry/protocol.md). It is a later development study and is not part of the primary frozen comparison.
 
 ## Determinism boundaries
 
