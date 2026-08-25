@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "broad_trajectories": 2100,
+  "independent_batch_controls": 400,
+  "trap_replays": 244,
+  "finite_sample_identity_residual": 8.049116928532385e-16
+}

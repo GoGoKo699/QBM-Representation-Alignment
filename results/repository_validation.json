@@ -1,0 +1,97 @@
+{
+  "layout": {
+    "container_local_paths": 0,
+    "file_count": 391,
+    "oversized_files": 0,
+    "zero_byte_files": 0
+  },
+  "mode": "release metadata, layout, links, and packaged scientific records",
+  "records": {
+    "boundary_geometry": {
+      "family_instances": 20,
+      "maximum_aligned_identity_residual": 3.3084646133829665e-14,
+      "replay_rows": 32,
+      "reproduced_traps": [
+        "ct_w5_i1",
+        "ct_w6_i1"
+      ],
+      "status": "PASS",
+      "suite_rows": 840,
+      "width_counts": {
+        "3": 5,
+        "4": 5,
+        "5": 5,
+        "6": 5
+      }
+    },
+    "confirmatory": {
+      "checks": [
+        {
+          "name": "protocol and seed commitments",
+          "passed": true
+        },
+        {
+          "name": "24 exact spectra and graph constructions",
+          "passed": true
+        },
+        {
+          "maximum_final_gap_residual": 2.1173618414138673e-12,
+          "maximum_final_pstar_residual": 1.1271808684027327e-12,
+          "maximum_initial_residual": 0.0,
+          "name": "all stored initial and final states",
+          "passed": true
+        },
+        {
+          "maximum_exact_natural_gap_increase": 0.0,
+          "minimum_success_pstar": 0.9004529059038603,
+          "name": "success certificate and exact-natural monotonicity",
+          "passed": true,
+          "successful_trajectories": 490
+        },
+        {
+          "name": "prespecified paired effects and aggregate counts",
+          "passed": true
+        },
+        {
+          "name": "preparation resource accounting",
+          "passed": true
+        }
+      ],
+      "manifest_file_sha256": "f7f5e5d578c82631cbaed2d7cc5bded2a7d46739120c686610456792247bbb71",
+      "manifest_payload_sha256": "4323d46a1c0e0143a6c72ffac62d740838f6dae5385de2e27e25be51414ee379",
+      "protocol_lock_sha256": "bde3a30ea19839537709622d595b14dbfb4a7b4d7b807398fe1656361a7d2f4c",
+      "seed_commitment_sha256": "8183f2b81995541577ff3267eb2b7a7ed520f899d965e6e1d2b055a1b8471b16",
+      "status": "PASS",
+      "trajectories": 1440
+    },
+    "finite_sample_geometry": {
+      "broad_trajectories": 2100,
+      "finite_sample_identity_residual": 8.049116928532385e-16,
+      "independent_batch_controls": 400,
+      "status": "PASS",
+      "trap_replays": 244
+    },
+    "partial_alignment_geometry": {
+      "bag_fisher_trajectories": 400,
+      "certificate_tight_instances": 20,
+      "exact_natural_oracle_trajectories": 400,
+      "heldout_instances": 16,
+      "independent_batch_controls": 700,
+      "sampled_trajectories": 3200,
+      "status": "PASS"
+    }
+  },
+  "release_metadata": {
+    "license": "BSD-3-Clause",
+    "package_name": "qbm-representation-alignment",
+    "repository_url": "https://github.com/GoGoKo699/QBM-Representation-Alignment",
+    "version": "1.0.0"
+  },
+  "status": "PASS",
+  "validation_records": {
+    "boundary_geometry": "results/boundary_geometry/validation.json",
+    "confirmatory": "results/confirmatory/validation.json",
+    "finite_sample_geometry": "results/finite_sample_geometry/validation.json",
+    "partial_alignment_geometry": "results/partial_alignment_geometry/validation.json"
+  }
+}

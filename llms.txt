@@ -1,0 +1,34 @@
+# Representation Alignment in Commuting Quantum Boltzmann Machines
+
+Repository URL:
+https://github.com/GoGoKo699/QBM-Representation-Alignment
+
+Release:
+1.0.0 (2026-08-25), BSD-3-Clause
+
+Primary question:
+How does the interaction graph of a commuting QBM affect finite-budget
+trainability and exact Gibbs/q-sample preparation?
+
+Canonical entry points:
+- README.md: confirmed result, commands, and repository map.
+- docs/scientific_claims.md: claim hierarchy and evidence boundaries.
+- docs/theory.md: aligned and partially aligned Gibbs geometry.
+- experiments/sparse_ising_confirmation/: independent primary experiment.
+- results/confirmatory/: canonical compact result tables.
+- figures/: three main public figures.
+- studies/: supporting mechanism and estimator studies.
+
+Primary confirmed effects:
+- target-biased Adam, max-weight problem tree minus chain: +0.325;
+- target-biased Adam, max-weight problem tree minus random target tree: +0.183333;
+- exact natural gradient, max-weight problem tree minus chain: +0.516667.
+
+Every primary target has a unique ground state. Success is normalized energy
+gap <= 0.1, which certifies ground-state probability >= 0.9.
+
+Important boundaries:
+- the models are commuting and classically tractable at the studied sizes;
+- no quantum advantage or asymptotic scaling is claimed;
+- full graphs remain more trainable than sparse trees;
+- the max-weight tree is an empirically supported design rule, not a universal theorem.

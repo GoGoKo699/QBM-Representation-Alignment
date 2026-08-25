@@ -1,0 +1,13 @@
+graph,left,right,paired,difference,ci_low,ci_median,ci_high,left_only,right_only
+chain,sampled_bag_fisher,sampled_full_fisher,80,0.0,0.0,0.0,0.0,0,0
+chain,sampled_bag_fisher,sampled_star_fisher,80,0.0,0.0,0.0,0.0,0,0
+chain,sampled_bag_fisher,sampled_two_block_fisher,80,0.0,0.0,0.0,0.0,0,0
+problem_tree,sampled_bag_fisher,sampled_full_fisher,80,-0.025,-0.0625,-0.025,0.0,0,2
+problem_tree,sampled_bag_fisher,sampled_star_fisher,80,0.025,0.0,0.025,0.0625,2,0
+problem_tree,sampled_bag_fisher,sampled_two_block_fisher,80,0.0,-0.037500000000000006,0.0,0.037500000000000006,1,1
+width2,sampled_bag_fisher,sampled_full_fisher,80,-0.25,-0.3875,-0.25,-0.1375,0,20
+width2,sampled_bag_fisher,sampled_star_fisher,80,-0.025,-0.1,-0.025,0.05,3,5
+width2,sampled_bag_fisher,sampled_two_block_fisher,80,-0.0125,-0.05,-0.0125,0.025,2,3
+width3,sampled_bag_fisher,sampled_full_fisher,80,-0.2625,-0.36250000000000004,-0.2625,-0.15000000000000002,1,22
+width3,sampled_bag_fisher,sampled_star_fisher,80,0.0125,-0.08750000000000002,0.012499999999999997,0.125,6,5
+width3,sampled_bag_fisher,sampled_two_block_fisher,80,-0.0125,-0.1375,-0.012500000000000004,0.11250000000000002,7,8

@@ -1,0 +1,51 @@
+{
+  "budgets": [
+    64,
+    256,
+    1024,
+    4096
+  ],
+  "parameter_seeds": [
+    0,
+    19,
+    42,
+    50,
+    101
+  ],
+  "methods": [
+    "sampled_adam",
+    "sampled_diagonal_fisher",
+    "sampled_two_block_fisher",
+    "sampled_full_fisher",
+    "ray_plus_residual",
+    "analytic_target_cooling"
+  ],
+  "steps": 200,
+  "calibration_instances": [
+    "ct_w3_i1",
+    "ct_w4_i1",
+    "ct_w5_i1",
+    "ct_w6_i1"
+  ],
+  "evaluation_instances": [
+    "ct_w3_i2",
+    "ct_w3_i3",
+    "ct_w3_i4",
+    "ct_w3_i5",
+    "ct_w4_i2",
+    "ct_w4_i3",
+    "ct_w4_i4",
+    "ct_w4_i5",
+    "ct_w5_i2",
+    "ct_w5_i3",
+    "ct_w5_i4",
+    "ct_w5_i5",
+    "ct_w6_i2",
+    "ct_w6_i3",
+    "ct_w6_i4",
+    "ct_w6_i5"
+  ],
+  "trap_replicates": 5,
+  "broad_rows": 2100,
+  "trap_rows": 244
+}

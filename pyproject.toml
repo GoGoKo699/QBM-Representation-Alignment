@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qbm-representation-alignment"
+version = "1.0.0"
+description = "Reproducible studies of representation alignment, trainability, and exact preparation in commuting quantum Boltzmann machines."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Ruge Lin"},
+]
+keywords = [
+  "quantum Boltzmann machine",
+  "Gibbs state",
+  "representation alignment",
+  "natural gradient",
+  "Ising model",
+  "treewidth",
+  "q-sample",
+  "reproducible research",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: BSD License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "numpy>=2.0",
+  "pandas>=2.0",
+  "matplotlib>=3.8",
+  "networkx>=3.2",
+  "numba>=0.60",
+  "scipy>=1.12",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/GoGoKo699/QBM-Representation-Alignment"
+Repository = "https://github.com/GoGoKo699/QBM-Representation-Alignment"
+Issues = "https://github.com/GoGoKo699/QBM-Representation-Alignment/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

@@ -1,0 +1,13 @@
+{
+  "name": "excited_boundary_trap_v1",
+  "frozen_before_aggregate_analysis": true,
+  "conditions": {
+    "energy_gap_strictly_greater_than": 0.1,
+    "dominant_state_is_not_ground": true,
+    "dominant_state_probability_at_least": 0.9,
+    "planted_state_probability_at_most": 0.1,
+    "effective_fisher_condition_number_at_least": 1000000.0,
+    "gradient_rms_at_most_fraction_of_initial": 0.1
+  },
+  "rationale": "Thresholds were specified from qualitative diagnostic cases before aggregate evaluation. A failed trajectory need not satisfy this stronger boundary-trap definition."
+}

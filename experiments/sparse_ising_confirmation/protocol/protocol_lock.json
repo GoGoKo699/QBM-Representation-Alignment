@@ -1,0 +1,12 @@
+{
+  "files": {
+    "CONFIRMATORY_PROTOCOL.md": "d73fe978ded3125f7bf6d5d6fd8bdf6a531fed8e678c38c80b7a2738224425f2",
+    "CONFIRMATORY_SEED_COMMITMENT.json": "6dc4b41b78c807b6c2f0eb333fe97d0d407fee74eeb2e1db9af9a80db3f9fd60",
+    "FROZEN_CLAIM.md": "544777915f0e5d7f735efc2e8a9e065b54fcdd6835cdab5d34ec912299f72a8f",
+    "GO_NO_GO.md": "695429309c75cd7d9224c4cb54eb2f5fdac031d393d216cae81f63bb558e6276",
+    "scripts/generate_sparse_ising_ensemble.py": "65cd86dcc487d16baa59c3f157bc0e0d70c690929d3c77cf414901afbeb1cc9c"
+  },
+  "frozen_date": "2026-08-25",
+  "lock_sha256": "bde3a30ea19839537709622d595b14dbfb4a7b4d7b807398fe1656361a7d2f4c",
+  "protocol_version": 1
+}

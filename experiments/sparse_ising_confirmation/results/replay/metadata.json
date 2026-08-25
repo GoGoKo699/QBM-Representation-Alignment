@@ -1,0 +1,9 @@
+{
+  "qualifying_traps": 0,
+  "budget": 1000,
+  "methods": [
+    "restarted_adam",
+    "exact_natural",
+    "ray_projection_cooling"
+  ]
+}

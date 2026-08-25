@@ -1,0 +1,6 @@
+method,low_only_success,high_only_success,both_success,neither_success,rate_64,rate_4096
+sampled_adam,4,5,29,42,0.4125,0.425
+sampled_diagonal_fisher,5,8,29,38,0.425,0.4625
+sampled_two_block_fisher,2,12,46,20,0.6,0.725
+sampled_full_fisher,0,7,73,0,0.9125,1.0
+ray_plus_residual,0,0,80,0,1.0,1.0

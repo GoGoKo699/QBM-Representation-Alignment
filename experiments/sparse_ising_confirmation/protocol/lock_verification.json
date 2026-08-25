@@ -1,0 +1,63 @@
+{
+  "analysis_lock_entries": [
+    {
+      "actual_sha256": "a03c63849ff26c8876c6753909e21d43a59d8b772f6bb251e8be2614b72c31c4",
+      "expected_sha256": "a03c63849ff26c8876c6753909e21d43a59d8b772f6bb251e8be2614b72c31c4",
+      "match": true,
+      "path": "IMPLEMENTATION_DECISIONS.md",
+      "role": "inferential or implementation"
+    },
+    {
+      "actual_sha256": "22614443584866d60b1207cd6dd771b1fa6e93447bf2fbb1cbd082fb4ceb24e9",
+      "expected_sha256": "22614443584866d60b1207cd6dd771b1fa6e93447bf2fbb1cbd082fb4ceb24e9",
+      "match": true,
+      "path": "scripts/confirmatory_common.py",
+      "role": "inferential or implementation"
+    },
+    {
+      "actual_sha256": "a4dd293ebc2993c20e3b3b939d2e5e7190b5a68f5ebba5d4b2622020f975d0ac",
+      "expected_sha256": "a4dd293ebc2993c20e3b3b939d2e5e7190b5a68f5ebba5d4b2622020f975d0ac",
+      "match": true,
+      "path": "scripts/run_confirmatory_cells.py",
+      "role": "inferential or implementation"
+    },
+    {
+      "actual_sha256": "991ab41058988bfd5558c33eecdc0f88a1b69b7ec89f41ba4c2022aa0eb86087",
+      "expected_sha256": "991ab41058988bfd5558c33eecdc0f88a1b69b7ec89f41ba4c2022aa0eb86087",
+      "match": true,
+      "path": "scripts/compute_confirmatory_resources.py",
+      "role": "inferential or implementation"
+    },
+    {
+      "actual_sha256": "3f015d54006fb121254b2fbac3da7731934cee5407f947686d1d8b734425f34a",
+      "expected_sha256": "3f015d54006fb121254b2fbac3da7731934cee5407f947686d1d8b734425f34a",
+      "match": true,
+      "path": "scripts/analyze_confirmatory_results.py",
+      "role": "inferential or implementation"
+    },
+    {
+      "actual_sha256": "4beb3276b6fbad5c67e68aad1d445e6548b7f4b4baa4e73fb96a072c3a58c848",
+      "expected_sha256": "4beb3276b6fbad5c67e68aad1d445e6548b7f4b4baa4e73fb96a072c3a58c848",
+      "match": true,
+      "path": "scripts/replay_confirmatory_traps.py",
+      "role": "inferential or implementation"
+    },
+    {
+      "actual_sha256": "59df33b9c328834e0f24f829433cabc74279b46599e1b7937ba55c203d1749f4",
+      "expected_sha256": "ee45d49cd5723b0420e4eaea8263c2576873e73bdeecc52a0c1bf392825fca88",
+      "match": false,
+      "path": "scripts/make_confirmatory_figures.py",
+      "role": "post-analysis visualization"
+    },
+    {
+      "actual_sha256": "f7f5e5d578c82631cbaed2d7cc5bded2a7d46739120c686610456792247bbb71",
+      "expected_sha256": "f7f5e5d578c82631cbaed2d7cc5bded2a7d46739120c686610456792247bbb71",
+      "match": true,
+      "path": "instances/confirmatory_sparse_ising_manifest.json",
+      "role": "inferential or implementation"
+    }
+  ],
+  "inferential_entries_all_match": true,
+  "note": "The locked inferential and implementation files match. The figure-only script was revised after analysis to consume finalized filenames; figures do not enter any hypothesis test, effect estimate, interval, or go/no-go decision.",
+  "visualization_entry_matches": false
+}

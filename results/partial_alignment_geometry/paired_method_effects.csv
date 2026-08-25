@@ -1,0 +1,17 @@
+graph,comparison,left_method,right_method,paired_trajectories,mean_difference,cluster_ci_low,cluster_ci_median,cluster_ci_high,left_only_successes,right_only_successes
+chain,star_minus_full,sampled_star_fisher,sampled_full_fisher,80,0.0,0.0,0.0,0.0,0,0
+chain,star_minus_two_block,sampled_star_fisher,sampled_two_block_fisher,80,0.0,0.0,0.0,0.0,0,0
+chain,protected_minus_adam,protected_ray_star,sampled_adam,80,0.0,0.0,0.0,0.0,0,0
+chain,full_minus_adam,sampled_full_fisher,sampled_adam,80,0.0,0.0,0.0,0.0,0,0
+problem_tree,star_minus_full,sampled_star_fisher,sampled_full_fisher,80,-0.050000000000000044,-0.1,-0.05,-0.0125,0,4
+problem_tree,star_minus_two_block,sampled_star_fisher,sampled_two_block_fisher,80,-0.025000000000000022,-0.0625,-0.025,0.0,0,2
+problem_tree,protected_minus_adam,protected_ray_star,sampled_adam,80,-0.32499999999999996,-0.5375,-0.325,-0.125,1,27
+problem_tree,full_minus_adam,sampled_full_fisher,sampled_adam,80,0.17500000000000004,0.0625,0.175,0.325,14,0
+width2,star_minus_full,sampled_star_fisher,sampled_full_fisher,80,-0.22500000000000003,-0.3375,-0.225,-0.125,0,18
+width2,star_minus_two_block,sampled_star_fisher,sampled_two_block_fisher,80,0.012500000000000011,-0.05,0.0125,0.07500000000000001,4,3
+width2,protected_minus_adam,protected_ray_star,sampled_adam,80,0.17499999999999993,-0.025000000000000012,0.175,0.375,21,7
+width2,full_minus_adam,sampled_full_fisher,sampled_adam,80,0.3125,0.2,0.3125,0.44999999999999996,25,0
+width3,star_minus_full,sampled_star_fisher,sampled_full_fisher,80,-0.2749999999999999,-0.375,-0.275,-0.1875,0,22
+width3,star_minus_two_block,sampled_star_fisher,sampled_two_block_fisher,80,-0.02499999999999991,-0.0875,-0.025,0.037500000000000006,3,5
+width3,protected_minus_adam,protected_ray_star,sampled_adam,80,0.49999999999999994,0.3625,0.5,0.6375000000000001,41,1
+width3,full_minus_adam,sampled_full_fisher,sampled_adam,80,0.43749999999999994,0.3375,0.4375,0.55,35,0

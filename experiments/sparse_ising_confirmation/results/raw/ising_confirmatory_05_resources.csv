@@ -1,0 +1,5 @@
+instance_id,graph,edge_count,parameter_count,width
+ising_confirmatory_05,chain,15,31,1.0
+ising_confirmatory_05,random_tree,15,31,1.0
+ising_confirmatory_05,problem_tree,15,31,1.0
+ising_confirmatory_05,full,24,40,

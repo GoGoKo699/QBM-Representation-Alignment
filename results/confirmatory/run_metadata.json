@@ -1,0 +1,20 @@
+{
+  "manifest_sha256": "4323d46a1c0e0143a6c72ffac62d740838f6dae5385de2e27e25be51414ee379",
+  "workers": 12,
+  "elapsed_seconds": 306.5084285736084,
+  "graphs": [
+    "chain",
+    "random_tree",
+    "problem_tree",
+    "full"
+  ],
+  "steps": 200,
+  "parameter_seeds": [
+    0,
+    19,
+    42,
+    50,
+    101
+  ],
+  "implementation_decisions_sha256": "a5c9745465650ba3cdb454bef5af5f9fc96f8fe596d23af9816c453d538acdd4"
+}

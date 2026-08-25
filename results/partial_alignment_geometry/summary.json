@@ -1,0 +1,25 @@
+{
+  "heldout_primary_trajectories": 2560,
+  "heldout_instances": 16,
+  "parameter_seeds": 5,
+  "graphs": [
+    "chain",
+    "problem_tree",
+    "width2",
+    "width3"
+  ],
+  "main_sample_budget": 256,
+  "exact_oracle_success": {
+    "chain": 0.0125,
+    "problem_tree": 0.95,
+    "width2": 0.8875,
+    "width3": 1.0
+  },
+  "same_batch_full_success": {
+    "chain": 0.0,
+    "problem_tree": 0.9375,
+    "width2": 0.7125,
+    "width3": 0.825
+  },
+  "bag_fisher_exploratory": true
+}

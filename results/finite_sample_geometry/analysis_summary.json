@@ -1,0 +1,431 @@
+{
+  "broad_rows": 2100,
+  "evaluation": {
+    "analytic_target_cooling": {
+      "0": {
+        "mean_first_success": 10.825,
+        "samples_per_observed_success": 0.0,
+        "success_rate": 1.0,
+        "successes": 80,
+        "trajectories": 80,
+        "trap_rate": 0.0
+      }
+    },
+    "independent_full_fisher": {
+      "1024": {
+        "mean_first_success": 50.04477611940298,
+        "mean_gradient_fisher_mismatch": 0.2295850660469667,
+        "samples_per_observed_success": 90784.4776119403,
+        "success_rate": 0.8375,
+        "successes": 67,
+        "trajectories": 80,
+        "trap_rate": 0.125
+      },
+      "256": {
+        "mean_first_success": 39.526315789473685,
+        "mean_gradient_fisher_mismatch": 0.4602223794291339,
+        "samples_per_observed_success": 173675.7894736842,
+        "success_rate": 0.2375,
+        "successes": 19,
+        "trajectories": 80,
+        "trap_rate": 0.425
+      },
+      "4096": {
+        "mean_first_success": 41.55,
+        "mean_gradient_fisher_mismatch": 0.11172417070904068,
+        "samples_per_observed_success": 170188.8,
+        "success_rate": 1.0,
+        "successes": 80,
+        "trajectories": 80,
+        "trap_rate": 0.0
+      },
+      "64": {
+        "mean_first_success": 26.666666666666668,
+        "mean_gradient_fisher_mismatch": 0.8659022177419355,
+        "samples_per_observed_success": 73877.33333333333,
+        "success_rate": 0.15,
+        "successes": 12,
+        "trajectories": 80,
+        "trap_rate": 0.6
+      }
+    },
+    "ray_plus_residual": {
+      "1024": {
+        "mean_first_success": 6.6125,
+        "samples_per_observed_success": 6771.2,
+        "success_rate": 1.0,
+        "successes": 80,
+        "trajectories": 80,
+        "trap_rate": 0.0
+      },
+      "256": {
+        "mean_first_success": 7.2625,
+        "samples_per_observed_success": 1859.2,
+        "success_rate": 1.0,
+        "successes": 80,
+        "trajectories": 80,
+        "trap_rate": 0.0
+      },
+      "4096": {
+        "mean_first_success": 6.4,
+        "samples_per_observed_success": 26214.4,
+        "success_rate": 1.0,
+        "successes": 80,
+        "trajectories": 80,
+        "trap_rate": 0.0
+      },
+      "64": {
+        "mean_first_success": 9.45,
+        "samples_per_observed_success": 604.8,
+        "success_rate": 1.0,
+        "successes": 80,
+        "trajectories": 80,
+        "trap_rate": 0.0
+      }
+    },
+    "sampled_adam": {
+      "1024": {
+        "mean_first_success": 40.44117647058823,
+        "samples_per_observed_success": 317108.70588235295,
+        "success_rate": 0.425,
+        "successes": 34,
+        "trajectories": 80,
+        "trap_rate": 0.4875
+      },
+      "256": {
+        "mean_first_success": 39.114285714285714,
+        "samples_per_observed_success": 75512.68571428572,
+        "success_rate": 0.4375,
+        "successes": 35,
+        "trajectories": 80,
+        "trap_rate": 0.45
+      },
+      "4096": {
+        "mean_first_success": 38.23529411764706,
+        "samples_per_observed_success": 1259399.5294117648,
+        "success_rate": 0.425,
+        "successes": 34,
+        "trajectories": 80,
+        "trap_rate": 0.5125
+      },
+      "64": {
+        "mean_first_success": 48.15151515151515,
+        "samples_per_observed_success": 21220.848484848484,
+        "success_rate": 0.4125,
+        "successes": 33,
+        "trajectories": 80,
+        "trap_rate": 0.4625
+      }
+    },
+    "sampled_diagonal_fisher": {
+      "1024": {
+        "mean_first_success": 3.111111111111111,
+        "samples_per_observed_success": 252245.33333333334,
+        "success_rate": 0.45,
+        "successes": 36,
+        "trajectories": 80,
+        "trap_rate": 0.3375
+      },
+      "256": {
+        "mean_first_success": 3.0,
+        "samples_per_observed_success": 59973.18918918919,
+        "success_rate": 0.4625,
+        "successes": 37,
+        "trajectories": 80,
+        "trap_rate": 0.35
+      },
+      "4096": {
+        "mean_first_success": 2.891891891891892,
+        "samples_per_observed_success": 959128.2162162162,
+        "success_rate": 0.4625,
+        "successes": 37,
+        "trajectories": 80,
+        "trap_rate": 0.375
+      },
+      "64": {
+        "mean_first_success": 3.0588235294117645,
+        "samples_per_observed_success": 17426.823529411766,
+        "success_rate": 0.425,
+        "successes": 34,
+        "trajectories": 80,
+        "trap_rate": 0.3875
+      }
+    },
+    "sampled_full_fisher": {
+      "1024": {
+        "mean_first_success": 8.1375,
+        "samples_per_observed_success": 8332.8,
+        "success_rate": 1.0,
+        "successes": 80,
+        "trajectories": 80,
+        "trap_rate": 0.0
+      },
+      "256": {
+        "mean_first_success": 7.746835443037975,
+        "samples_per_observed_success": 2628.0506329113923,
+        "success_rate": 0.9875,
+        "successes": 79,
+        "trajectories": 80,
+        "trap_rate": 0.0
+      },
+      "4096": {
+        "mean_first_success": 8.7875,
+        "samples_per_observed_success": 35993.6,
+        "success_rate": 1.0,
+        "successes": 80,
+        "trajectories": 80,
+        "trap_rate": 0.0
+      },
+      "64": {
+        "mean_first_success": 7.109589041095891,
+        "samples_per_observed_success": 1676.2739726027398,
+        "success_rate": 0.9125,
+        "successes": 73,
+        "trajectories": 80,
+        "trap_rate": 0.0
+      }
+    },
+    "sampled_two_block_fisher": {
+      "1024": {
+        "mean_first_success": 4.689655172413793,
+        "samples_per_observed_success": 82096.55172413793,
+        "success_rate": 0.725,
+        "successes": 58,
+        "trajectories": 80,
+        "trap_rate": 0.075
+      },
+      "256": {
+        "mean_first_success": 4.491228070175438,
+        "samples_per_observed_success": 21706.105263157893,
+        "success_rate": 0.7125,
+        "successes": 57,
+        "trajectories": 80,
+        "trap_rate": 0.0375
+      },
+      "4096": {
+        "mean_first_success": 4.637931034482759,
+        "samples_per_observed_success": 328174.3448275862,
+        "success_rate": 0.725,
+        "successes": 58,
+        "trajectories": 80,
+        "trap_rate": 0.05
+      },
+      "64": {
+        "mean_first_success": 4.291666666666667,
+        "samples_per_observed_success": 8765.333333333334,
+        "success_rate": 0.6,
+        "successes": 48,
+        "trajectories": 80,
+        "trap_rate": 0.1125
+      }
+    }
+  },
+  "evaluation_rows": 1680,
+  "independent_rows": 400,
+  "maximum_sample_identity_residual": 0.0,
+  "trap_replay": {
+    "199": {
+      "analytic_target_cooling": {
+        "0": {
+          "mean_first_success": 53.5,
+          "mean_rank": -1.0,
+          "success_rate": 1.0,
+          "successes": 2,
+          "trajectories": 2
+        }
+      },
+      "ray_plus_residual": {
+        "1024": {
+          "mean_first_success": 17.9,
+          "mean_rank": 5.8,
+          "success_rate": 1.0,
+          "successes": 10,
+          "trajectories": 10
+        },
+        "256": {
+          "mean_first_success": 19.2,
+          "mean_rank": 3.6,
+          "success_rate": 1.0,
+          "successes": 10,
+          "trajectories": 10
+        },
+        "4096": {
+          "mean_first_success": 18.2,
+          "mean_rank": 10.8,
+          "success_rate": 1.0,
+          "successes": 10,
+          "trajectories": 10
+        },
+        "64": {
+          "mean_first_success": 20.5,
+          "mean_rank": 1.6,
+          "success_rate": 1.0,
+          "successes": 10,
+          "trajectories": 10
+        }
+      },
+      "sampled_adam": {
+        "1024": {
+          "mean_first_success": null,
+          "mean_rank": 5.8,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        },
+        "256": {
+          "mean_first_success": null,
+          "mean_rank": 3.6,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        },
+        "4096": {
+          "mean_first_success": null,
+          "mean_rank": 10.8,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        },
+        "64": {
+          "mean_first_success": null,
+          "mean_rank": 1.6,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        }
+      },
+      "sampled_full_fisher": {
+        "1024": {
+          "mean_first_success": null,
+          "mean_rank": 5.8,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        },
+        "256": {
+          "mean_first_success": null,
+          "mean_rank": 3.6,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        },
+        "4096": {
+          "mean_first_success": null,
+          "mean_rank": 10.8,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        },
+        "64": {
+          "mean_first_success": null,
+          "mean_rank": 1.6,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        }
+      }
+    },
+    "999": {
+      "analytic_target_cooling": {
+        "0": {
+          "mean_first_success": 67.5,
+          "mean_rank": -1.0,
+          "success_rate": 1.0,
+          "successes": 2,
+          "trajectories": 2
+        }
+      },
+      "ray_plus_residual": {
+        "1024": {
+          "mean_first_success": 21.7,
+          "mean_rank": 2.3,
+          "success_rate": 1.0,
+          "successes": 10,
+          "trajectories": 10
+        },
+        "256": {
+          "mean_first_success": 22.4,
+          "mean_rank": 0.9,
+          "success_rate": 1.0,
+          "successes": 10,
+          "trajectories": 10
+        },
+        "4096": {
+          "mean_first_success": 20.8,
+          "mean_rank": 3.4,
+          "success_rate": 1.0,
+          "successes": 10,
+          "trajectories": 10
+        },
+        "64": {
+          "mean_first_success": 22.9,
+          "mean_rank": 0.3,
+          "success_rate": 1.0,
+          "successes": 10,
+          "trajectories": 10
+        }
+      },
+      "sampled_adam": {
+        "1024": {
+          "mean_first_success": null,
+          "mean_rank": 2.3,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        },
+        "256": {
+          "mean_first_success": null,
+          "mean_rank": 0.9,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        },
+        "4096": {
+          "mean_first_success": null,
+          "mean_rank": 3.4,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        },
+        "64": {
+          "mean_first_success": null,
+          "mean_rank": 0.3,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        }
+      },
+      "sampled_full_fisher": {
+        "1024": {
+          "mean_first_success": null,
+          "mean_rank": 2.3,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        },
+        "256": {
+          "mean_first_success": null,
+          "mean_rank": 0.9,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        },
+        "4096": {
+          "mean_first_success": null,
+          "mean_rank": 3.4,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        },
+        "64": {
+          "mean_first_success": null,
+          "mean_rank": 0.3,
+          "success_rate": 0.0,
+          "successes": 0,
+          "trajectories": 10
+        }
+      }
+    }
+  },
+  "trap_rows": 244
+}

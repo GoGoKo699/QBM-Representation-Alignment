@@ -1,0 +1,80 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install
+        run: python -m pip install -e ".[test]"
+      - name: Compile
+        run: python -W error::SyntaxWarning -m compileall -f -q src experiments studies scripts tests
+      - name: Tests
+        run: python -m pytest -q
+      - name: Link check
+        run: python scripts/check_links.py
+      - name: Repository metadata and packaged-record validation
+        run: python scripts/validate_repository.py
+
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install build dependencies
+        run: python -m pip install --upgrade pip setuptools wheel
+      - name: Build wheel
+        run: python -m pip wheel . --no-deps --no-build-isolation --wheel-dir dist
+
+  primary-scientific-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: python -m pip install -e ".[test]"
+      - name: Validate independent confirmation
+        run: python experiments/sparse_ising_confirmation/scripts/validate_experiment.py
+
+  supporting-study-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        validator:
+          - studies/boundary_geometry/scripts/validate_study.py
+          - studies/finite_sample_geometry/scripts/validate_study.py
+          - studies/partial_alignment_geometry/scripts/validate_study.py
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: python -m pip install -e ".[test]"
+      - name: Validate study
+        run: python ${{ matrix.validator }}

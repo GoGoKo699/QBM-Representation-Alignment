@@ -1,0 +1,15 @@
+{
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 20260825,
+  "full_target_biased_adam_boundary_traps": 0,
+  "hypotheses": {
+    "H1": true,
+    "H2": true,
+    "H3": true
+  },
+  "material_resource_ratio_threshold": 0.5,
+  "median_angle_ratio_problem_tree_to_full": 0.236862058909303,
+  "median_cnot_ratio_problem_tree_to_full": 0.23098791755508175,
+  "preparation_criterion_pass": true,
+  "status": "PASS"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "certificate_tight_instances": 20,
+  "sampled_trajectories": 3200,
+  "exact_natural_oracle_trajectories": 400,
+  "independent_batch_controls": 700,
+  "bag_fisher_trajectories": 400,
+  "heldout_instances": 16
+}

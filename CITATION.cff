@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, data, or figures, please cite this repository."
+title: "Representation Alignment in Commuting Quantum Boltzmann Machines"
+type: software
+authors:
+  - family-names: Lin
+    given-names: Ruge
+    affiliation: "The Hong Kong University of Science and Technology (Guangzhou)"
+version: 1.0.0
+date-released: 2026-08-25
+repository-code: "https://github.com/GoGoKo699/QBM-Representation-Alignment"
+url: "https://github.com/GoGoKo699/QBM-Representation-Alignment"
+license: BSD-3-Clause
+abstract: >-
+  Reproducible theory, experiments, and exact preparation-resource analyses for
+  representation alignment in commuting quantum Boltzmann machines, including
+  an independently confirmed weighted sparse-Ising experiment.
+keywords:
+  - quantum Boltzmann machine
+  - Gibbs state
+  - representation alignment
+  - natural gradient
+  - Ising model
+  - treewidth
+  - q-sample
+  - reproducible research

@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "name": "protocol and seed commitments",
+      "passed": true
+    },
+    {
+      "name": "24 exact spectra and graph constructions",
+      "passed": true
+    },
+    {
+      "maximum_final_gap_residual": 2.1173618414138673e-12,
+      "maximum_final_pstar_residual": 1.1271808684027327e-12,
+      "maximum_initial_residual": 0.0,
+      "name": "all stored initial and final states",
+      "passed": true
+    },
+    {
+      "maximum_exact_natural_gap_increase": 0.0,
+      "minimum_success_pstar": 0.9004529059038603,
+      "name": "success certificate and exact-natural monotonicity",
+      "passed": true,
+      "successful_trajectories": 490
+    },
+    {
+      "name": "prespecified paired effects and aggregate counts",
+      "passed": true
+    },
+    {
+      "name": "preparation resource accounting",
+      "passed": true
+    }
+  ],
+  "manifest_file_sha256": "f7f5e5d578c82631cbaed2d7cc5bded2a7d46739120c686610456792247bbb71",
+  "manifest_payload_sha256": "4323d46a1c0e0143a6c72ffac62d740838f6dae5385de2e27e25be51414ee379",
+  "protocol_lock_sha256": "bde3a30ea19839537709622d595b14dbfb4a7b4d7b807398fe1656361a7d2f4c",
+  "seed_commitment_sha256": "8183f2b81995541577ff3267eb2b7a7ed520f899d965e6e1d2b055a1b8471b16",
+  "status": "PASS",
+  "trajectories": 1440
+}

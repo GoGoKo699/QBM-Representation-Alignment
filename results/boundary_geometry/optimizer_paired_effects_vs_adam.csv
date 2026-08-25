@@ -1,0 +1,13 @@
+optimizer,baseline,paired_rows,success_difference,cluster_ci_low,cluster_ci_median,cluster_ci_high,method_only_success,baseline_only_success,exact_mcnemar_two_sided_p,initialization
+armijo_gd,adam,20,0.1,0.0,0.1,0.25,2,0,0.5,exact_target
+diagonal_fisher,adam,20,0.1,0.0,0.1,0.25,2,0,0.5,exact_target
+exact_natural,adam,20,0.15,0.0,0.15,0.3,3,0,0.25,exact_target
+projected_adam,adam,20,-0.85,-1.0,-0.85,-0.7,0,17,1.52587890625e-05,exact_target
+ray_projected,adam,20,-0.85,-1.0,-0.85,-0.7,0,17,1.52587890625e-05,exact_target
+target_direction,adam,20,-0.85,-1.0,-0.85,-0.7,0,17,1.52587890625e-05,exact_target
+armijo_gd,adam,100,0.03,-0.01,0.030000000000000006,0.07,4,1,0.375,target_biased
+diagonal_fisher,adam,100,0.05,0.01,0.05,0.09,6,1,0.125,target_biased
+exact_natural,adam,100,0.66,0.55,0.66,0.77,66,0,2.710505431213761e-20,target_biased
+projected_adam,adam,100,-0.34,-0.45,-0.33999999999999997,-0.23000000000000004,0,34,1.1641532182693481e-10,target_biased
+ray_projected,adam,100,-0.33,-0.4499999999999999,-0.33,-0.22000000000000003,1,34,2.0954757928848267e-09,target_biased
+target_direction,adam,100,-0.22,-0.34,-0.22000000000000003,-0.10999999999999999,1,23,2.9802322387695312e-06,target_biased

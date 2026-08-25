@@ -1,0 +1,25 @@
+{
+  "groups": 120,
+  "trajectories": 3200,
+  "logs": 32760,
+  "main_budget": 256,
+  "scaling_budgets": [
+    64,
+    1024
+  ],
+  "steps": 200,
+  "parameter_seeds": [
+    0,
+    19,
+    42,
+    50,
+    101
+  ],
+  "graphs": [
+    "chain",
+    "problem_tree",
+    "width2",
+    "width3"
+  ],
+  "created_utc": "2026-08-24T16:27:15Z"
+}

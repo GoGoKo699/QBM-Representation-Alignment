@@ -1,0 +1,8 @@
+graph,budget,comparison,paired_trajectories,mean_difference,ci_low,ci_median,ci_high,left_only,right_only
+problem_tree,256,same_minus_independent_split_total,80,0.05,0.0125,0.05,0.1,4,0
+problem_tree,256,same_minus_independent_equal_batches,80,0.025,-0.025,0.025,0.07500000000000001,3,1
+width3,64,same_minus_independent_split_total,80,0.45,0.32500000000000007,0.45,0.575,38,2
+width3,64,same_minus_independent_equal_batches,80,0.1125,-0.03749999999999999,0.1125,0.2625,19,10
+width3,256,same_minus_independent_split_total,80,0.1,0.0125,0.1,0.18750000000000003,12,4
+width3,256,same_minus_independent_equal_batches,80,0.025,-0.037500000000000006,0.025,0.08750000000000001,7,5
+width3,1024,same_minus_independent_split_total,80,0.0,-0.05,0.0,0.05,3,3
