@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 
@@ -37,6 +38,7 @@ def test_canonical_public_files_exist():
         "figures/preparation_resources.png",
         "results/confirmatory/validation.json",
         "results/temperature_tree_geometry/validation.json",
+        "results/repository_validation.json",
         "studies/temperature_tree_geometry/README.md",
         "studies/temperature_tree_geometry/protocol.md",
         "studies/temperature_tree_geometry/scripts/validate_study.py",
@@ -74,4 +76,36 @@ def test_citation_is_easy_to_find_and_versioned():
     assert "Cite this repository" in readme
     assert f"Version {EXPECTED_VERSION}" in citation
     assert "@software" in citation
+    assert "v1.0.0" in citation
+    assert "full commit SHA" in citation
     assert "see CITATION.md" in cff
+
+
+def test_deep_entry_points_link_back_to_citation():
+    readmes = [
+        "experiments/sparse_ising_confirmation/README.md",
+        "studies/boundary_geometry/README.md",
+        "studies/finite_sample_geometry/README.md",
+        "studies/partial_alignment_geometry/README.md",
+        "studies/temperature_tree_geometry/README.md",
+    ]
+    for relative in readmes:
+        text = (ROOT / relative).read_text(encoding="utf-8")
+        assert "## Citation" in text, relative
+        assert "CITATION.md" in text, relative
+
+
+def test_primary_experiment_terms_are_unambiguous():
+    text = (ROOT / "experiments/sparse_ising_confirmation/README.md").read_text(encoding="utf-8")
+    assert "not an external replication" in text
+    assert "`problem_tree`" in text
+    assert "ground-state probability" in text
+    assert "planted-ground-state probability" not in text
+
+
+def test_packaged_repository_validation_is_current():
+    payload = json.loads((ROOT / "results" / "repository_validation.json").read_text(encoding="utf-8"))
+    assert payload["status"] == "PASS"
+    assert payload["release_metadata"]["version"] == EXPECTED_VERSION
+    assert "temperature_tree_geometry" in payload["validation_records"]
+    assert payload["records"]["temperature_tree_geometry"]["status"] == "PASS"
