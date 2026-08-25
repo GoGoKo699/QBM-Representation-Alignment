@@ -13,6 +13,16 @@ python -m pip install -e ".[test]"
 
 The maintained dependencies are listed in `pyproject.toml` and `requirements.txt`.
 
+## Record the exact version
+
+Before running a calculation, record the checked-out commit:
+
+```bash
+git rev-parse HEAD
+```
+
+The primary confirmed `MAXJ` result is preserved in GitHub release `v1.0.0`. For the expanded Version 1.1.0 archive, use a matching release tag when available or record the full commit SHA. Citation formats and version-selection guidance are in [`CITATION.md`](../CITATION.md).
+
 ## Fast validation
 
 ```bash
@@ -72,7 +82,7 @@ The exhaustive run enumerates all target-supported spanning trees over 61 temper
 
 ## Frozen evidence
 
-`experiments/sparse_ising_confirmation/protocol/frozen_source/` preserves the exact locked protocol and generator source used before the independent instances were generated. These files intentionally retain their original wording and hashes. Maintained scripts outside that directory use the public repository layout.
+`experiments/sparse_ising_confirmation/protocol/frozen_source/` preserves the exact locked protocol and generator source used before the separately generated confirmatory targets were created. These files intentionally retain their original wording and hashes. Maintained scripts outside that directory use the public repository layout.
 
 The temperature-tree study separately preserves its protocol in [`studies/temperature_tree_geometry/protocol.md`](../studies/temperature_tree_geometry/protocol.md). It is a later development study and is not part of the primary frozen comparison.
 

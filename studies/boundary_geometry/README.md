@@ -12,10 +12,16 @@ This supporting study isolates a finite-budget optimizer failure in a fully alig
 
 ## Reproduce compact results
 
+From the repository root:
+
 ```bash
-python scripts/analyze_results.py
-python scripts/make_figures.py
-python scripts/validate_study.py
+python studies/boundary_geometry/scripts/analyze_results.py
+python studies/boundary_geometry/scripts/make_figures.py
+python studies/boundary_geometry/scripts/validate_study.py
 ```
 
-The twenty shared instances are stored once under `../../data/certificate_tight_instances/`. Raw and derived tables are stored under `../../results/boundary_geometry/`.
+The twenty shared instances are stored once under [`data/certificate_tight_instances/`](../../data/certificate_tight_instances/). Raw and derived tables are stored under [`results/boundary_geometry/`](../../results/boundary_geometry/).
+
+## Citation
+
+Cite the repository using [`CITATION.md`](../../CITATION.md) and include the release tag or full commit SHA used. This is a supporting mechanism study, not a separate primary confirmation.

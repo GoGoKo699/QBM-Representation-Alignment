@@ -2,11 +2,13 @@
 
 ## Purpose
 
-This experiment tests whether a problem-aligned spanning-tree QBM outperforms generic sparse controls of the same treewidth and pair-parameter count on an independent weighted sparse-Ising ensemble, and whether exact natural geometry preserves the same representation ordering.
+This experiment tests whether a problem-aligned spanning-tree QBM outperforms generic sparse controls of the same treewidth and pair-parameter count on a separately generated weighted sparse-Ising ensemble, and whether exact natural geometry preserves the same representation ordering.
 
 The protocol, instance seeds, graph rules, optimizer settings, endpoint, and primary effect thresholds were fixed before the confirmatory instances were generated. Exact locked source files and hashes are preserved under [`frozen_source/`](frozen_source/).
 
-## Independent problem family
+This is a prospectively frozen internal confirmation on targets unseen during development. It is not an external replication by another research group.
+
+## Separately generated problem family
 
 Each target is
 
@@ -65,7 +67,7 @@ Assign random priorities independent of target weights and take the resulting Kr
 
 ### Maximum-weight target-supported spanning tree
 
-Take a maximum spanning tree with edge weights $|J_{ij}|$ and lexicographic tie-breaking.
+Take a maximum spanning tree with edge weights $|J_{ij}|$ and lexicographic tie-breaking. In source code and result tables this representation is named `problem_tree`; the documentation also abbreviates it as `MAXJ`.
 
 ### Full target graph
 

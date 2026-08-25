@@ -16,10 +16,16 @@ The identity is not a generic claim about Fisher estimation. At mature wrong-sta
 
 ## Reproduce compact results
 
+From the repository root:
+
 ```bash
-python scripts/analyze_results.py
-python scripts/make_figures.py
-python scripts/validate_study.py
+python studies/finite_sample_geometry/scripts/analyze_results.py
+python studies/finite_sample_geometry/scripts/make_figures.py
+python studies/finite_sample_geometry/scripts/validate_study.py
 ```
 
-Raw and canonical tables are under `../../results/finite_sample_geometry/`. Saved boundary states are shared with `../boundary_geometry/` rather than duplicated.
+Raw and canonical tables are under [`results/finite_sample_geometry/`](../../results/finite_sample_geometry/). Saved boundary states are shared with [`studies/boundary_geometry/`](../boundary_geometry/) rather than duplicated.
+
+## Citation
+
+Cite the repository using [`CITATION.md`](../../CITATION.md) and include the release tag or full commit SHA used. This is a supporting estimator study, not a separate primary confirmation.

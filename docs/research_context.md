@@ -9,6 +9,7 @@ This repository studies a commuting, classically tractable sector of quantum Bol
 - Patel and Wilde, [“Natural gradient and parameter estimation for quantum Boltzmann machines,”](https://doi.org/10.1103/j8nb-by4l) *Physical Review A* **112**, 052421 (2025), developed thermal-state information matrices and natural-gradient estimation procedures.
 - Minervini, Patel, and Wilde, [“Evolved quantum Boltzmann machines,”](https://doi.org/10.1103/k2hw-r25g) *Physical Review A* **113**, 032427 (2026), introduced the broader evolved-QBM ansatz and its information geometry.
 - McClean *et al.*, [“Barren plateaus in quantum neural network training landscapes,”](https://doi.org/10.1038/s41467-018-07090-4) *Nature Communications* **9**, 4812 (2018), established the standard random-circuit barren-plateau phenomenon. This repository does not claim that phenomenon.
+- Chow and Liu, [“Approximating discrete probability distributions with dependence trees,”](https://doi.org/10.1109/TIT.1968.1054142) *IEEE Transactions on Information Theory* **14**, 462–467 (1968), established the forward-KL-optimal dependence-tree construction based on pairwise mutual information.
 - Peyrard *et al.*, [“Exact and approximate inference in graphical models: variable elimination and beyond,”](https://arxiv.org/abs/1506.08544) reviews variable elimination and the role of treewidth in exact inference.
 - Möttönen *et al.*, [“Transformation of quantum states using uniformly controlled rotations,”](https://arxiv.org/abs/quant-ph/0407010) provides the controlled-rotation machinery used in logical q-sample resource accounting.
 
@@ -18,10 +19,19 @@ The repository combines four elements:
 
 1. an exact decomposition of fully and partially aligned commuting Gibbs optimization geometry;
 2. matched sparse-representation controls at fixed treewidth, interaction count, and parameter count;
-3. a prespecified independent weighted sparse-Ising confirmation comparing a native chain, a random target-supported tree, a maximum-weight target-supported tree, and the full target graph;
+3. a prospectively frozen weighted sparse-Ising confirmation on separately generated targets, comparing a native chain, a random target-supported tree, a maximum-weight target-supported tree, and the full target graph;
 4. exact logical q-sample preparation accounting for every confirmatory representation.
 
 The maximum-weight spanning-tree algorithm itself is classical and is not claimed as new. The supported design result is empirical: retaining stronger target interactions improves finite-budget trainability over both a generic chain and a prespecified random target-supported tree while preserving width-one exact inference and q-sample preparation.
+
+## Relation to classical tree approximation
+
+The deterministic `MAXJ` rule and the Chow–Liu rule answer different questions:
+
+- Chow–Liu weights edges by pairwise mutual information and selects the tree minimizing forward information loss for a target probability distribution.
+- `MAXJ` weights target-Hamiltonian edges by $|J_{ij}|$ and is evaluated here for finite-budget optimization under a fixed Gibbs parameterization and for exact logical preparation cost.
+
+Accordingly, `MAXJ` is not a Chow–Liu estimator and is not claimed to be forward-KL optimal. The later temperature-dependent tree study explicitly compares cooling-power and forward-KL criteria and records their operational disagreement.
 
 ## Scope boundary
 

@@ -1,6 +1,6 @@
 # How to cite this repository
 
-If you use the software, data, figures, protocols, or derived results, cite the repository and identify the exact version used.
+If you use the software, data, figures, protocols, or derived results, cite the repository and identify the exact version or commit used.
 
 ## Recommended citation
 
@@ -21,13 +21,23 @@ GitHub also displays a **Cite this repository** control generated from [`CITATIO
 }
 ```
 
+## Which version to cite
+
+- **Primary confirmed `MAXJ` result:** cite the preserved [`v1.0.0`](https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.0.0) release. It contains the prospectively frozen weighted sparse-Ising confirmation and its complete evidence chain.
+- **Expanded archive:** cite Version 1.1.0 together with a matching release tag when available. Otherwise include the full commit SHA so the cited state is unambiguous.
+- **Pre-boundary-study state:** the branch `archive/confirmed-result-2026-08-25` preserves the repository immediately before the temperature-dependent supporting study was added.
+
+To record the exact commit of a local checkout, run:
+
+```bash
+git rev-parse HEAD
+```
+
 ## Citing an exact computational result
 
-For reproducibility, include a release tag, archived branch, or full commit SHA in addition to the citation.
-
-- The primary confirmed experiment is under [`experiments/sparse_ising_confirmation/`](experiments/sparse_ising_confirmation/), with canonical tables in [`results/confirmatory/`](results/confirmatory/).
+- The primary confirmation is under [`experiments/sparse_ising_confirmation/`](experiments/sparse_ising_confirmation/), with canonical tables in [`results/confirmatory/`](results/confirmatory/).
 - The later exhaustive graph-selection boundary study is under [`studies/temperature_tree_geometry/`](studies/temperature_tree_geometry/), with compact tables in [`results/temperature_tree_geometry/`](results/temperature_tree_geometry/).
-- The repository state immediately before the later supporting study is preserved on branch `archive/confirmed-result-2026-08-25`.
+- For a particular table or figure, cite the repository and name the file path, release tag, or full commit SHA used.
 
 ## Future paper citation
 

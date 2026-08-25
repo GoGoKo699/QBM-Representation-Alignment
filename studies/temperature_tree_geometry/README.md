@@ -4,7 +4,7 @@ This supporting study asks a narrow follow-up question to the repository's confi
 
 > If a width-one tree is selected by the fraction of the target Gibbs cooling direction that it retains, does the preferred tree change with temperature, and does that change improve the compressed Gibbs state?
 
-The study exhaustively evaluates all target-supported spanning trees for ten reused $n=8$ positive Exact-1-in-3-SAT instances. It is developmental evidence, not an additional independent confirmation.
+The study exhaustively evaluates all target-supported spanning trees for ten reused $n=8$ positive Exact-1-in-3-SAT instances. It is developmental evidence, not an additional prospectively frozen confirmation.
 
 ## Result
 
@@ -29,7 +29,6 @@ The supported conclusion is therefore negative and specific:
 
 This result does **not** weaken the repository's primary confirmed claim. The primary experiment shows that the deterministic maximum-absolute-coupling tree is an effective preparation-matched heuristic under its prospectively frozen optimization benchmark. This study asks a different question: whether another target-state geometric criterion can systematically improve upon that heuristic.
 
-
 ## Evidence map
 
 - [Frozen protocol](protocol.md)
@@ -42,12 +41,12 @@ This result does **not** weaken the repository's primary confirmed claim. The pr
 - [Mechanism correlation summary](../../results/temperature_tree_geometry/mechanism_correlation_summary.csv)
 - [Mechanism summary](../../results/temperature_tree_geometry/mechanism_summary.json)
 - [Detailed validation](../../results/temperature_tree_geometry/detailed_validation.json)
-- [Independent validation](../../results/temperature_tree_geometry/independent_validation.json)
+- [Independent numerical validation](../../results/temperature_tree_geometry/independent_validation.json)
 - [Repository validation record](../../results/temperature_tree_geometry/validation.json)
 
 ## Regenerate the study
 
-Install the repository normally, then run the exhaustive calculation:
+Install the repository normally, then run the exhaustive calculation from the repository root:
 
 ```bash
 python studies/temperature_tree_geometry/scripts/run_exhaustive_study.py --clean-results
@@ -68,4 +67,8 @@ bash scripts/refresh_analysis.sh temperature
 - The instances were reused from earlier development work.
 - No adaptive rewiring experiment is claimed.
 - The post-hoc metric correlations are descriptive rather than frozen selection tests.
-- A different on-manifold tree criterion would be a new hypothesis and would require independent confirmation.
+- A different on-manifold tree criterion would be a new hypothesis and would require fresh confirmation on a new corpus.
+
+## Citation
+
+Cite the repository using [`CITATION.md`](../../CITATION.md) and include the release tag or full commit SHA used. When citing this boundary result, also name `studies/temperature_tree_geometry/` or the specific compact result file.

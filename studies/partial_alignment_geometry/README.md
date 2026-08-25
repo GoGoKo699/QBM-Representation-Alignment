@@ -26,10 +26,16 @@ The omitted-cost covariance is state dependent, so the exact natural direction i
 
 ## Reproduce compact results
 
+From the repository root:
+
 ```bash
-python scripts/analyze_results.py
-python scripts/make_figures.py
-python scripts/validate_study.py
+python studies/partial_alignment_geometry/scripts/analyze_results.py
+python studies/partial_alignment_geometry/scripts/make_figures.py
+python studies/partial_alignment_geometry/scripts/validate_study.py
 ```
 
-Graphs are stored under `graphs/`; canonical tables are under `../../results/partial_alignment_geometry/`. The twenty shared instances are not duplicated here.
+Graphs are stored under [`graphs/`](graphs/); canonical tables are under [`results/partial_alignment_geometry/`](../../results/partial_alignment_geometry/). The twenty shared instances are not duplicated here.
+
+## Citation
+
+Cite the repository using [`CITATION.md`](../../CITATION.md) and include the release tag or full commit SHA used. This is a supporting geometry study, not a separate primary confirmation.
