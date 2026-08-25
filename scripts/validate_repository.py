@@ -5,8 +5,12 @@ from __future__ import annotations
 import importlib.util
 import json
 import re
-import tomllib
 from pathlib import Path
+
+try:
+    import tomllib
+except ModuleNotFoundError:  # Python 3.10 compatibility
+    import tomli as tomllib
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED_NAME = "qbm-representation-alignment"
