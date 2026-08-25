@@ -68,6 +68,7 @@ jobs:
           - studies/boundary_geometry/scripts/validate_study.py
           - studies/finite_sample_geometry/scripts/validate_study.py
           - studies/partial_alignment_geometry/scripts/validate_study.py
+          - studies/temperature_tree_geometry/scripts/validate_study.py
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
