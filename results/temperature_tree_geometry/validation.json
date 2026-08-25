@@ -1,0 +1,19 @@
+{
+  "detailed_validation": "detailed_validation.json",
+  "gate_results": {
+    "distinct_from_forward_kl": true,
+    "finite_temperature_evolution": true,
+    "projected_energy_relevance": false,
+    "useful_geometric_headroom": true
+  },
+  "independent_validation": "independent_validation.json",
+  "instances": 10,
+  "mode": "compact supporting-study validation",
+  "scientific_outcome": "GEOMETRY_ONLY_DO_NOT_USE_COOLING_POWER_AS_OPERATIONAL_SELECTOR",
+  "source_verdict": "pt1a_verdict.json",
+  "spanning_trees": 20812,
+  "status": "PASS",
+  "study": "temperature-dependent tree geometry",
+  "temperature_points_per_instance": 61,
+  "tree_temperature_cells_recomputed_in_reference_run": 1269532
+}
