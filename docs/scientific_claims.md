@@ -4,12 +4,16 @@
 
 For commuting quantum Boltzmann machines used to minimize sparse Ising costs, target-informed sparse interaction graphs can improve finite-budget trainability without increasing treewidth or parameter count.
 
-The independent weighted sparse-Ising experiment compares four representations:
+The prospectively frozen weighted sparse-Ising experiment compares four representations on a separately generated target ensemble:
 
 1. a native chain;
 2. a prespecified random target-supported spanning tree;
 3. a maximum-absolute-coupling target-supported spanning tree;
 4. the full target graph.
+
+The protocol, seed commitments, graph rules, endpoints, and decision thresholds were fixed before the target ensemble was generated. This is an internal confirmation on unseen targets, not an external replication by another group.
+
+In source code and result tables, `problem_tree` denotes the maximum-absolute-coupling target-supported spanning tree (`MAXJ`).
 
 The chain and both tree models have width one, fifteen pair interactions, and thirty-one parameters. Under target-biased Adam, the maximum-weight target tree exceeds the chain by 32.5 percentage points and the random target tree by 18.33 points. Under exact natural-gradient optimization, it exceeds the chain by 51.67 points. The paired effects and multiplicity-adjusted intervals are stored in [`results/confirmatory/primary_effects.csv`](../results/confirmatory/primary_effects.csv).
 
