@@ -3,7 +3,7 @@
 Repository URL:
 https://github.com/GoGoKo699/QBM-Representation-Alignment
 
-Release:
+Release metadata:
 1.1.0 (2026-08-25), BSD-3-Clause
 
 Primary question:
@@ -11,18 +11,23 @@ How does the interaction graph of a commuting QBM affect finite-budget
 trainability and exact Gibbs/q-sample preparation?
 
 Canonical entry points:
-- README.md: confirmed result, commands, and repository map.
+- README.md: confirmed result, commands, repository map, and citation route.
 - docs/evidence_map.md: claim-to-protocol/data/code/validation navigation.
 - docs/scientific_claims.md: claim hierarchy and evidence boundaries.
-- docs/research_context.md: established literature and novelty boundary.
+- docs/research_context.md: established literature, classical tree comparison, and novelty boundary.
 - docs/statistical_analysis.md: paired instance-cluster bootstrap and Holm step-down rule.
 - docs/theory.md: aligned and partially aligned Gibbs geometry.
-- experiments/sparse_ising_confirmation/: independent primary experiment.
+- experiments/sparse_ising_confirmation/: prospectively frozen primary experiment.
 - results/confirmatory/: canonical compact result tables.
 - figures/: three main public figures.
 - studies/: supporting mechanism, estimator, and graph-selection-boundary studies.
 - studies/temperature_tree_geometry/: exhaustive temperature-dependent tree study.
 - results/temperature_tree_geometry/: compact tree-temperature summaries and validation.
+
+Primary evidence status:
+- the protocol, seed commitments, graph rules, endpoints, and decision thresholds were fixed before a separately generated weighted sparse-Ising target ensemble was evaluated;
+- this is an internal confirmation on unseen targets, not an external replication;
+- in source code and CSV tables, problem_tree denotes the deterministic maximum-|J| target-supported spanning tree (MAXJ).
 
 Primary confirmed effects:
 - target-biased Adam, max-weight problem tree minus chain: +0.325;
@@ -45,5 +50,7 @@ Important boundaries:
 - no adaptive tree-selection algorithm is validated.
 
 Citation:
-- CITATION.md: copy-ready citation and BibTeX.
+- CITATION.md: copy-ready citation, BibTeX, and version-selection guidance.
 - CITATION.cff: machine-readable GitHub citation metadata.
+- use release v1.0.0 for the primary confirmed MAXJ result;
+- for a later repository state, identify the matching release tag or full commit SHA.
