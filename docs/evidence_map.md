@@ -39,6 +39,26 @@ This page gives reviewers, reusers, and first-time readers the shortest path fro
 - Resource-pair analysis: [`results/confirmatory/resource_pairs.csv`](../results/confirmatory/resource_pairs.csv)
 - Compiler and resource script: [`experiments/sparse_ising_confirmation/scripts/compute_preparation_resources.py`](../experiments/sparse_ising_confirmation/scripts/compute_preparation_resources.py)
 
+## Temperature-dependent tree boundary result
+
+**Result.** The tree maximizing retained target-state cooling power changes with temperature, but that optimum is not a better compressed Gibbs representation on the tested development corpus. At the certification temperature it gives a worse projected target-energy gap than both the best hot-optimal tree and the forward-KL-optimal tree on all ten instances.
+
+| Evidence layer | Canonical location |
+|---|---|
+| Human-readable summary | [`studies/temperature_tree_geometry/README.md`](../studies/temperature_tree_geometry/README.md) |
+| Frozen protocol | [`studies/temperature_tree_geometry/protocol.md`](../studies/temperature_tree_geometry/protocol.md) |
+| Scientific report | [`studies/temperature_tree_geometry/report.md`](../studies/temperature_tree_geometry/report.md) |
+| Temperature-path summary | [`results/temperature_tree_geometry/temperature_path_summary.csv`](../results/temperature_tree_geometry/temperature_path_summary.csv) |
+| Certification-temperature summary | [`results/temperature_tree_geometry/certification_temperature_summary.csv`](../results/temperature_tree_geometry/certification_temperature_summary.csv) |
+| Instance gate summary | [`results/temperature_tree_geometry/instance_gate_summary.csv`](../results/temperature_tree_geometry/instance_gate_summary.csv) |
+| Mechanism correlation summary | [`results/temperature_tree_geometry/mechanism_correlation_summary.csv`](../results/temperature_tree_geometry/mechanism_correlation_summary.csv) |
+| Mechanism summary | [`results/temperature_tree_geometry/mechanism_summary.json`](../results/temperature_tree_geometry/mechanism_summary.json) |
+| Reproduction script | [`studies/temperature_tree_geometry/scripts/run_exhaustive_study.py`](../studies/temperature_tree_geometry/scripts/run_exhaustive_study.py) |
+| Compact validator | [`studies/temperature_tree_geometry/scripts/validate_study.py`](../studies/temperature_tree_geometry/scripts/validate_study.py) |
+| Validation record | [`results/temperature_tree_geometry/validation.json`](../results/temperature_tree_geometry/validation.json) |
+
+This is a later supporting boundary study on reused instances. It is not part of the primary confirmatory table and does not change the `MAXJ` benchmark claim.
+
 ## Success certificate
 
 **Claim.** For a unique ground state with gap $\gamma$, the criterion $\Delta E/\gamma\le0.1$ certifies $p_\star\ge0.9$.
@@ -62,10 +82,11 @@ Full independent-experiment validation:
 python experiments/sparse_ising_confirmation/scripts/validate_experiment.py
 ```
 
-Regenerate compact tables and figures from packaged raw trajectories:
+Regenerate compact tables and figures from packaged data:
 
 ```bash
 bash scripts/refresh_analysis.sh
+bash scripts/refresh_analysis.sh temperature
 ```
 
 See [`docs/reproducibility.md`](reproducibility.md) for the complete workflow.

@@ -9,7 +9,7 @@ except ModuleNotFoundError:  # Python 3.10
     import tomli as tomllib
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_VERSION = "1.0.0"
+EXPECTED_VERSION = "1.1.0"
 EXPECTED_URL = "https://github.com/GoGoKo699/QBM-Representation-Alignment"
 
 
@@ -36,6 +36,10 @@ def test_canonical_public_files_exist():
         "figures/primary_effects.png",
         "figures/preparation_resources.png",
         "results/confirmatory/validation.json",
+        "results/temperature_tree_geometry/validation.json",
+        "studies/temperature_tree_geometry/README.md",
+        "studies/temperature_tree_geometry/protocol.md",
+        "studies/temperature_tree_geometry/scripts/validate_study.py",
         "scripts/release_check.sh",
     ]
     assert not [relative for relative in required if not (ROOT / relative).is_file()]
@@ -68,6 +72,6 @@ def test_citation_is_easy_to_find_and_versioned():
     cff = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
     assert "## How to cite" in readme
     assert "Cite this repository" in readme
-    assert "Version 1.0.0" in citation
+    assert f"Version {EXPECTED_VERSION}" in citation
     assert "@software" in citation
     assert "see CITATION.md" in cff

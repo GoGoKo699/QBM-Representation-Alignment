@@ -17,6 +17,7 @@ validate-all:
 	python studies/boundary_geometry/scripts/validate_study.py
 	python studies/finite_sample_geometry/scripts/validate_study.py
 	python studies/partial_alignment_geometry/scripts/validate_study.py
+	python studies/temperature_tree_geometry/scripts/validate_study.py
 
 analyze:
 	bash scripts/refresh_analysis.sh core

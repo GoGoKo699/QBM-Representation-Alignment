@@ -1,0 +1,118 @@
+{
+  "expected_long_csv_rows": 1269532,
+  "expected_total_trees": 20812,
+  "instances": [
+    {
+      "direct_gap_residual": 2.6645352591003757e-15,
+      "direct_kl_residual": 1.1102230246251565e-15,
+      "direct_q_residual": 4.2577052994374753e-14,
+      "direct_xi_residual": 1.2073675392798577e-13,
+      "instance": "n8i1",
+      "mi_kl_identity_residual": 6.217248937900877e-15,
+      "tree_count": 1392,
+      "tree_hashes_match": true
+    },
+    {
+      "direct_gap_residual": 2.6645352591003757e-15,
+      "direct_kl_residual": 1.887379141862766e-15,
+      "direct_q_residual": 1.2923136866183071e-10,
+      "direct_xi_residual": 6.429239363114903e-10,
+      "instance": "n8i2",
+      "mi_kl_identity_residual": 7.105427357601002e-15,
+      "tree_count": 2308,
+      "tree_hashes_match": true
+    },
+    {
+      "direct_gap_residual": 2.6645352591003757e-15,
+      "direct_kl_residual": 2.220446049250313e-15,
+      "direct_q_residual": 3.568565581923977e-12,
+      "direct_xi_residual": 1.7289863984970566e-11,
+      "instance": "n8i3",
+      "mi_kl_identity_residual": 4.884981308350689e-15,
+      "tree_count": 1168,
+      "tree_hashes_match": true
+    },
+    {
+      "direct_gap_residual": 3.552713678800501e-15,
+      "direct_kl_residual": 2.1094237467877974e-15,
+      "direct_q_residual": 8.118644645449535e-13,
+      "direct_xi_residual": 1.0963896457383271e-11,
+      "instance": "n8i4",
+      "mi_kl_identity_residual": 5.551115123125783e-15,
+      "tree_count": 1180,
+      "tree_hashes_match": true
+    },
+    {
+      "direct_gap_residual": 1.7763568394002505e-15,
+      "direct_kl_residual": 1.7659484985443896e-15,
+      "direct_q_residual": 2.487923062011177e-13,
+      "direct_xi_residual": 1.0557665852672926e-12,
+      "instance": "n8i5",
+      "mi_kl_identity_residual": 7.105427357601002e-15,
+      "tree_count": 1855,
+      "tree_hashes_match": true
+    },
+    {
+      "direct_gap_residual": 5.329070518200751e-15,
+      "direct_kl_residual": 2.1094237467877974e-15,
+      "direct_q_residual": 1.8679086055684024e-12,
+      "direct_xi_residual": 8.34016189443787e-12,
+      "instance": "n8i6",
+      "mi_kl_identity_residual": 7.105427357601002e-15,
+      "tree_count": 4317,
+      "tree_hashes_match": true
+    },
+    {
+      "direct_gap_residual": 2.6645352591003757e-15,
+      "direct_kl_residual": 1.7763568394002505e-15,
+      "direct_q_residual": 2.5917115675788693e-13,
+      "direct_xi_residual": 2.089273198890851e-12,
+      "instance": "n8i7",
+      "mi_kl_identity_residual": 7.105427357601002e-15,
+      "tree_count": 2378,
+      "tree_hashes_match": true
+    },
+    {
+      "direct_gap_residual": 3.552713678800501e-15,
+      "direct_kl_residual": 7.105427357601002e-15,
+      "direct_q_residual": 2.1545404349510022e-12,
+      "direct_xi_residual": 6.27742302583556e-12,
+      "instance": "n8i8",
+      "mi_kl_identity_residual": 7.993605777301127e-15,
+      "tree_count": 2634,
+      "tree_hashes_match": true
+    },
+    {
+      "direct_gap_residual": 2.6645352591003757e-15,
+      "direct_kl_residual": 1.9220736113823023e-15,
+      "direct_q_residual": 3.024133027329512e-12,
+      "direct_xi_residual": 2.2964574686312744e-11,
+      "instance": "n8i9",
+      "mi_kl_identity_residual": 7.105427357601002e-15,
+      "tree_count": 1255,
+      "tree_hashes_match": true
+    },
+    {
+      "direct_gap_residual": 4.440892098500626e-15,
+      "direct_kl_residual": 1.7763568394002505e-15,
+      "direct_q_residual": 4.92156010389877e-10,
+      "direct_xi_residual": 2.8134716223426892e-09,
+      "instance": "n8i10",
+      "mi_kl_identity_residual": 4.218847493575595e-15,
+      "tree_count": 2325,
+      "tree_hashes_match": true
+    }
+  ],
+  "long_csv_rows": 1269532,
+  "overall_max_residuals": {
+    "direct_gap_residual": 5.329070518200751e-15,
+    "direct_kl_residual": 7.105427357601002e-15,
+    "direct_q_residual": 4.92156010389877e-10,
+    "direct_xi_residual": 2.8134716223426892e-09,
+    "mi_kl_identity_residual": 7.993605777301127e-15,
+    "tree_hash_mismatch_count": 0
+  },
+  "overall_pass": true,
+  "sample_beta_indices": [0, 1, 10, 20, 40, 60],
+  "total_trees": 20812
+}

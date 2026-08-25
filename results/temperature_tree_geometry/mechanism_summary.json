@@ -1,0 +1,14 @@
+{
+  "median_spearman_forward_kl_vs_gap": 0.883782182212,
+  "median_spearman_retained_fraction_vs_gap": -0.0345086750039,
+  "median_spearman_tracking_mismatch_vs_gap": 0.7987753290165001,
+  "operational_interval": [0.75, 1.25],
+  "post_hoc_descriptive_only": true,
+  "s1_mean_gap_hot": 0.28701232695640005,
+  "s1_mean_gap_klopt": 0.26551450886210004,
+  "s1_mean_gap_qopt": 0.47436377028130006,
+  "s1_median_xi_ratio_qopt_to_hot": 1.7826216478164396,
+  "s1_median_xi_ratio_qopt_to_kl": 1.661251002078382,
+  "s1_qopt_worse_than_hot_count": 10,
+  "s1_qopt_worse_than_kl_count": 10
+}
