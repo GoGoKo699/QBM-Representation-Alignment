@@ -43,7 +43,10 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-test = ["pytest>=8"]
+test = [
+  "pytest>=8",
+  "tomli>=2.0; python_version < '3.11'",
+]
 
 [project.urls]
 Homepage = "https://github.com/GoGoKo699/QBM-Representation-Alignment"
