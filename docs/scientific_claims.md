@@ -19,11 +19,11 @@ The full graph is more trainable, but its exact graphical-model factorization is
 
 The supported conclusion is a finite-size tradeoff:
 
-\[
+$$
 \text{greater target alignment and trainability}
 \quad\leftrightarrow\quad
 \text{larger exact preparation description}.
-\]
+$$
 
 The experiment does not establish an asymptotic resource separation or hardware advantage.
 
@@ -31,11 +31,11 @@ The experiment does not establish an asymptotic resource separation or hardware 
 
 For a partially aligned representation,
 
-\[
+$$
 \nabla E=-I_Gc_G-r_G,
 \qquad
-r_G=\operatorname{Cov}(F_G,R_G).
-\]
+r_G=\mathrm{Cov}(F_G,R_G).
+$$
 
 The omitted-cost covariance term is zero only when the target Hamiltonian lies completely in the ansatz feature span. This supplies a representation-level explanation for the empirical chain/tree/full ordering.
 

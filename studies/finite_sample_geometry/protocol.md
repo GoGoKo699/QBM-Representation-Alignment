@@ -7,7 +7,7 @@ rescue when gradients and Fisher information are estimated from Gibbs samples?
 
 ## Instances and split
 
-The experiment uses the twenty fixed-\(n=16\), certificate-tight instances
+The experiment uses the twenty fixed-$n=16$, certificate-tight instances
 from the exact-moment boundary study, with exact widths 3, 4, 5, and 6.
 
 Hyperparameters were fixed after inspecting only:
@@ -26,9 +26,9 @@ The held-out evaluation set consists of the remaining sixteen instances
 
 Every broad trajectory starts from
 
-\[
+$$
 \theta^{(0)}=c+0.3\xi,
-\]
+$$
 
 using seeds
 
@@ -44,7 +44,7 @@ and the exact-moment boundary study canonical all-pairs random-coordinate contra
 64, 256, 1024, 4096 Gibbs samples per update
 ```
 
-The samples are exact categorical draws from the enumerated \(n=16\) Gibbs
+The samples are exact categorical draws from the enumerated $n=16$ Gibbs
 distribution. This is a controlled Monte Carlo experiment, not a hardware or
 circuit-shot experiment.
 
@@ -56,13 +56,13 @@ update, so later realized configurations are not identical.
 
 For one batch,
 
-\[
-\widehat g=-\widehat{\operatorname{Cov}}(F,C),
+$$
+\widehat g=-\widehat{\mathrm{Cov}}(F,C),
 \qquad
-\widehat I=\widehat{\operatorname{Cov}}(F,F).
-\]
+\widehat I=\widehat{\mathrm{Cov}}(F,F).
+$$
 
-The unbiased \(1/(M-1)\) covariance convention is used.
+The unbiased $1/(M-1)$ covariance convention is used.
 
 ## Optimizers
 
@@ -81,12 +81,12 @@ using the sampled gradient.
 
 ### Sampled diagonal Fisher
 
-\[
+$$
 d_j=-\frac{\widehat g_j}
 {\widehat I_{jj}+10^{-3}\max_k\widehat I_{kk}}.
-\]
+$$
 
-The Euclidean step norm is capped at \(0.5\|c\|_2\).
+The Euclidean step norm is capped at $0.5\|c\|_2$.
 
 ### Sampled two-block Fisher
 
@@ -97,20 +97,20 @@ Separate covariance blocks are formed for:
 
 Within each block,
 
-\[
-\widehat I_{\rm reg}
+$$
+\widehat I_{\mathrm{reg}}
 =0.9\widehat I
-+0.1\operatorname{diag}(\widehat I)
-+10^{-3}\bar I_{\rm diag}\,\mathbb I.
-\]
++0.1\mathrm{diag}(\widehat I)
++10^{-3}\bar I_{\mathrm{diag}}\,\mathbb I.
+$$
 
-The two solves are concatenated and capped at \(0.5\|c\|_2\).
+The two solves are concatenated and capped at $0.5\|c\|_2$.
 
 ### Same-batch full Fisher
 
 The gradient and full Fisher matrix are estimated from the same batch. A tiny
-ridge of \(10^{-10}\) times the mean covariance diagonal is used for numerical
-solving. The step norm is capped at \(0.5\|c\|_2\).
+ridge of $10^{-10}$ times the mean covariance diagonal is used for numerical
+solving. The step norm is capped at $0.5\|c\|_2$.
 
 ### Independent-batch full Fisher
 
@@ -125,24 +125,24 @@ This is a control for the exact same-batch cancellation.
 
 Write
 
-\[
+$$
 \theta=\beta c+u,
 \qquad
 u\perp c.
-\]
+$$
 
 Each update:
 
-1. increases \(\beta\) by 0.5;
+1. increases $\beta$ by 0.5;
 2. retains 95% of the old transverse component;
 3. adds a sampled two-block-Fisher residual step, projected orthogonally to
-   \(c\) and capped at \(0.1\|c\|_2\).
+   $c$ and capped at $0.1\|c\|_2$.
 
 ### Analytic target cooling
 
-\[
+$$
 \theta\leftarrow\theta+0.5c.
-\]
+$$
 
 No moment-estimation samples are used for the update. This is the aligned
 oracle/control. The reported zero sample count excludes any practical stopping
@@ -152,9 +152,9 @@ or validation measurement.
 
 The protocol permits at most 200 recorded states. Success is
 
-\[
+$$
 \Delta E\le0.1.
-\]
+$$
 
 Exact enumeration is used only to evaluate trajectories and identify the first
 successful state retrospectively. The sample-to-success values are therefore

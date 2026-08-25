@@ -24,10 +24,15 @@ variables:              n = 16
 parameter seeds:        0, 19, 42, 50, 101
 recorded states:        200 per trajectory
 confirmatory runs:      1,440
-success:                (E - E0) / spectral_gap <= 0.1
 ```
 
-Every target has one exact ground state. Therefore the success threshold certifies ground-state probability at least `0.9`.
+Success is defined by
+
+$$
+\frac{E-E_0}{\gamma}\le 0.1,
+$$
+
+where $\gamma$ is the spectral gap. Every target has one exact ground state, so this threshold certifies ground-state probability $p_\star\ge 0.9$.
 
 | Optimizer and initialization | Native chain | Random target tree | Max-weight target tree | Full graph |
 |---|---:|---:|---:|---:|
@@ -53,7 +58,7 @@ conditional angles:  31
 CNOT upper count:    30
 ```
 
-The full target graphs have treewidth `3-5` and require `75-159` conditional angles, with median `131`.
+The full target graphs have treewidth $3$–$5$ and require 75–159 conditional angles, with median 131.
 
 - [Primary effects](results/confirmatory/primary_effects.csv)
 - [Aggregate outcomes](results/confirmatory/aggregate.csv)
@@ -65,31 +70,31 @@ The full target graphs have treewidth `3-5` and require `75-159` conditional ang
 
 For a Gibbs family
 
-\[
-p_\theta(z)=\frac{e^{-\theta^{\mathsf T}F_G(z)}}{Z(\theta)}
-\]
+$$
+p_\theta(z)=\frac{e^{-\theta^{\mathsf{T}}F_G(z)}}{Z(\theta)}
+$$
 
 and a target decomposed as
 
-\[
-C(z)=c_0+c_G^{\mathsf T}F_G(z)+R_G(z),
-\]
+$$
+C(z)=c_0+c_G^{\mathsf{T}}F_G(z)+R_G(z),
+$$
 
 the exact energy gradient is
 
-\[
+$$
 \nabla E(\theta)=-I_G(\theta)c_G-r_G(\theta),
-\]
+$$
 
 where
 
-\[
-I_G=\operatorname{Cov}(F_G,F_G),
+$$
+I_G=\mathrm{Cov}(F_G,F_G),
 \qquad
-r_G=\operatorname{Cov}(F_G,R_G).
-\]
+r_G=\mathrm{Cov}(F_G,R_G).
+$$
 
-Full alignment gives `R_G = 0`, so the Fisher natural-gradient direction is the target coefficient direction. Partial representations retain a state-dependent omitted-cost covariance term. This explains why representations with the same width and number of parameters can have different trainability.
+Full alignment gives $R_G=0$, so the Fisher natural-gradient direction is the target coefficient direction. Partial representations retain a state-dependent omitted-cost covariance term. This explains why representations with the same width and number of parameters can have different trainability.
 
 See [theory](docs/theory.md).
 

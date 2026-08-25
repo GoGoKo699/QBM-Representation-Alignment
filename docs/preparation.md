@@ -2,11 +2,11 @@
 
 ## Q-sample
 
-For a classical Gibbs distribution `p(x)`, the coherent q-sample is
+For a classical Gibbs distribution $p(x)$, the coherent q-sample is
 
-\[
+$$
 |q\rangle=\sum_x\sqrt{p(x)}|x\rangle.
-\]
+$$
 
 It reproduces computational-basis sampling probabilities and diagonal-observable expectations. It is not the mixed Gibbs state.
 
@@ -14,21 +14,21 @@ It reproduces computational-basis sampling probabilities and diagonal-observable
 
 The exact diagonal Gibbs state
 
-\[
+$$
 \rho=\sum_xp(x)|x\rangle\!\langle x|
-\]
+$$
 
 can be obtained by preparing
 
-\[
+$$
 |\Psi\rangle=\sum_x\sqrt{p(x)}|x\rangle_A|x\rangle_B
-\]
+$$
 
-and tracing out register `B`. After q-sample preparation on `A`, one copy CNOT per variable produces this purification.
+and tracing out register $B$. After q-sample preparation on $A$, one copy CNOT per variable produces this purification.
 
 ## Graphical factorization
 
-Variable elimination gives exact conditional probability tables. Reversing an elimination order yields a sequence of multiplexed `R_y` rotations. If the induced width is `w`, each conditional depends on at most `w` parent variables.
+Variable elimination gives exact conditional probability tables. Reversing an elimination order yields a sequence of multiplexed $R_y$ rotations. If the induced width is $w$, each conditional depends on at most $w$ parent variables.
 
 The repository reports:
 
@@ -41,7 +41,7 @@ These are logical description resources. They are not fault-tolerant gate counts
 
 ## Confirmatory representations
 
-For `n=16`:
+For $n=16$:
 
 | Representation | Width | Conditional angles | CNOT upper count |
 |---|---:|---:|---:|

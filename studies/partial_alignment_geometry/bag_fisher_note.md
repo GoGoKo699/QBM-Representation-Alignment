@@ -6,20 +6,20 @@ This method was designed after the specified primary partial-alignment analysis 
 
 ## Construction
 
-Given a stored elimination order, simulate fill-in. At each eliminated variable \(v\), form the variable bag
+Given a stored elimination order, simulate fill-in. At each eliminated variable $v$, form the variable bag
 
-\[
+$$
 B_v=\{v\}\cup N_+(v),
-\]
+$$
 
-where \(N_+(v)\) is the set of remaining neighbors at elimination.
+where $N_+(v)$ is the set of remaining neighbors at elimination.
 
-A feature belongs to the bag block when its variable support is contained in \(B_v\). Thus each block contains:
+A feature belongs to the bag block when its variable support is contained in $B_v$. Thus each block contains:
 
-- fields \(Z_i\) for variables in the bag;
-- retained pair features \(Z_iZ_j\) whose endpoints are both in the bag.
+- fields $Z_i$ for variables in the bag;
+- retained pair features $Z_iZ_j$ whose endpoints are both in the bag.
 
-For each block, solve the same shrinkage-regularized local covariance system used by the graph-star method. Add overlapping directions and divide each coordinate by its block multiplicity. The final direction is capped at \(0.5\|c_G\|\).
+For each block, solve the same shrinkage-regularized local covariance system used by the graph-star method. Add overlapping directions and divide each coordinate by its block multiplicity. The final direction is capped at $0.5\|c_G\|$.
 
 ## Exact first-step diagnostic
 

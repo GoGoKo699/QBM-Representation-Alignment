@@ -10,10 +10,10 @@ The protocol, instance seeds, graph rules, optimizer settings, endpoint, and pri
 
 Each target is
 
-\[
+$$
 C(z)=\sum_{i=1}^{16}h_i z_i+\sum_{(i,j)\in E}J_{ij}z_i z_j,
 \qquad z_i\in\{-1,+1\}.
-\]
+$$
 
 The target graph is a connected random 3-regular graph on sixteen variables, followed by a deterministic random relabeling. Edge signs are uniform, edge magnitudes are drawn from `Uniform(0.5, 1.5)`, and local fields from `Uniform(-0.35, 0.35)`. The complete coefficient vector is RMS normalized.
 
@@ -21,7 +21,7 @@ An instance is accepted only when exact enumeration verifies:
 
 1. graph connectivity;
 2. one unique ground state;
-3. spectral gap at least `0.05` after normalization.
+3. spectral gap at least $0.05$ after normalization.
 
 Acceptance does not depend on QBM optimization outcomes.
 
@@ -29,15 +29,15 @@ Acceptance does not depend on QBM optimization outcomes.
 
 Success is
 
-\[
+$$
 \frac{E-E_0}{\gamma}\le0.1.
-\]
+$$
 
 For a unique ground state this certifies
 
-\[
+$$
 p_\star\ge0.9.
-\]
+$$
 
 ## Instance and parameter seeds
 
@@ -65,7 +65,7 @@ Assign random priorities independent of target weights and take the resulting Kr
 
 ### Maximum-weight target-supported spanning tree
 
-Take a maximum spanning tree with edge weights `abs(J_ij)` and lexicographic tie-breaking.
+Take a maximum spanning tree with edge weights $|J_{ij}|$ and lexicographic tie-breaking.
 
 ### Full target graph
 
@@ -79,17 +79,17 @@ One all-pairs Gaussian vector is generated for each parameter seed and restricte
 
 Random:
 
-\[
+$$
 \theta^{(0)}=0.3\xi.
-\]
+$$
 
 Target biased:
 
-\[
+$$
 \theta^{(0)}=c_G+0.3\xi,
-\]
+$$
 
-where `c_G` is the target coefficient vector projected onto the retained features.
+where $c_G$ is the target coefficient vector projected onto the retained features.
 
 ## Optimizers
 
@@ -109,7 +109,7 @@ epsilon 1e-8
 Applied to all four representations from target-biased initialization:
 
 - Moore-Penrose Fisher inverse;
-- direction norm cap `0.5 ||c_G||_2`;
+- direction norm cap $0.5\lVert c_G\rVert_2$;
 - exact Armijo energy evaluation;
 - fixed pseudoinverse and line-search conventions.
 
