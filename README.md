@@ -5,13 +5,15 @@
 [![Python 3.10-3.13](https://img.shields.io/badge/Python-3.10--3.13-blue.svg)](pyproject.toml)
 [![Cite](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.md)
 
-**Start here:** [evidence map](docs/evidence_map.md) · [scientific claims](docs/scientific_claims.md) · [research context](docs/research_context.md) · [theory](docs/theory.md) · [statistics](docs/statistical_analysis.md) · [reproduce](docs/reproducibility.md) · [how to cite](CITATION.md)
+**Reader routes:** [confirmed result](#confirmed-result) · [claim-to-evidence map](docs/evidence_map.md) · [scope and nonclaims](docs/scientific_claims.md) · [research context](docs/research_context.md) · [reproduce](docs/reproducibility.md) · [cite](CITATION.md)
 
 This repository studies a concrete ansatz-design question:
 
 > How should the interaction graph of a commuting quantum Boltzmann machine be chosen when both finite-budget trainability and exact Gibbs/q-sample preparation matter?
 
-The central result is independently confirmed on 24 weighted sparse-Ising targets. At the same treewidth, interaction count, and parameter count, a target-supported spanning-tree representation trains substantially better than a generic chain. Selecting the tree by maximum absolute target-coupling weight improves further over a prespecified random target-supported tree. The full target graph remains the trainability ceiling, but requires a larger exact conditional-rotation description.
+The central result comes from a prospectively frozen confirmation on 24 separately generated weighted sparse-Ising targets. The protocol, instance-seed commitment, graph rules, endpoints, and decision thresholds were fixed before that target ensemble was generated. This is an internal confirmation on unseen targets, not an external replication by another group.
+
+At the same treewidth, interaction count, and parameter count, a target-supported spanning-tree representation trains substantially better than a generic chain. Selecting the tree by maximum absolute target-coupling weight improves further over a prespecified random target-supported tree. The full target graph remains the trainability ceiling, but requires a larger exact conditional-rotation description.
 
 The work concerns a commuting, classically tractable sector of quantum Boltzmann machines. It provides exact geometry, controlled optimization evidence, and explicit q-sample preparation resources. It does **not** claim quantum speedup.
 
@@ -19,7 +21,7 @@ The work concerns a commuting, classically tractable sector of quantum Boltzmann
 
 ## Confirmed result
 
-The independent experiment uses:
+The prospectively frozen experiment uses:
 
 ```text
 instances:              24 connected weighted 3-regular Ising targets
@@ -65,6 +67,8 @@ CNOT upper count:    30
 
 The full target graphs have treewidth $3$–$5$ and require 75–159 conditional angles, with median 131.
 
+In source code and CSV files, `problem_tree` denotes the deterministic maximum-$|J|$ target-supported spanning tree, abbreviated `MAXJ` in the documentation.
+
 - [Primary effects](results/confirmatory/primary_effects.csv)
 - [Aggregate outcomes](results/confirmatory/aggregate.csv)
 - [Preparation resources](results/confirmatory/preparation_resources.csv)
@@ -89,7 +93,7 @@ GitHub reads [`CITATION.cff`](CITATION.cff) and exposes a **Cite this repository
 
 > Lin, R. (2026). *Representation Alignment in Commuting Quantum Boltzmann Machines* (Version 1.1.0) [Computer software]. GitHub. https://github.com/GoGoKo699/QBM-Representation-Alignment
 
-When citing a precisely reproduced result, include the release tag or full commit SHA used.
+For the primary confirmed `MAXJ` result alone, the preserved GitHub release is [`v1.0.0`](https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.0.0). For the expanded Version 1.1.0 archive, cite a matching release tag when available; otherwise include the full commit SHA. See [`CITATION.md`](CITATION.md) for the exact choice.
 
 ## Geometry
 
@@ -121,13 +125,13 @@ $$
 
 Full alignment gives $R_G=0$, so the Fisher natural-gradient direction is the target coefficient direction. Partial representations retain a state-dependent omitted-cost covariance term. This explains why representations with the same width and number of parameters can have different trainability.
 
-See [theory](docs/theory.md). For established prior work and the novelty boundary, see [research context](docs/research_context.md).
+See [theory](docs/theory.md). For established prior work, the classical tree-approximation comparison, and the novelty boundary, see [research context](docs/research_context.md).
 
 ## Repository structure
 
 ```text
 src/qbm_alignment/                         shared implementation
-experiments/sparse_ising_confirmation/     primary independent experiment
+experiments/sparse_ising_confirmation/     prospectively frozen primary experiment
 studies/boundary_geometry/                 same-state optimizer replay
 studies/finite_sample_geometry/            sampled covariance geometry
 studies/partial_alignment_geometry/        partial-representation study
@@ -139,7 +143,7 @@ docs/                                      theory, preparation, formats, limits
 tests/                                     fast regression and identity tests
 ```
 
-The supporting studies are not additional primary claims. They document mechanisms, estimator behavior, and tested boundaries that motivated or contextualize the independent confirmation.
+The supporting studies are not additional primary claims. They document mechanisms, estimator behavior, and tested boundaries that motivated or contextualize the prospectively frozen confirmation.
 
 ## Installation
 
