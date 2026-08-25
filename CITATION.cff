@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use the software, data, figures, protocols, or derived results, cite this repository; see CITATION.md for copy-ready formats."
+message: "If you use the software, data, figures, protocols, or derived results, cite this repository and identify the release tag or commit; see CITATION.md for copy-ready formats."
 title: "Representation Alignment in Commuting Quantum Boltzmann Machines"
 type: software
 authors:
@@ -14,14 +14,18 @@ license: BSD-3-Clause
 abstract: >-
   Reproducible theory, experiments, and exact preparation-resource analyses for
   representation alignment in commuting quantum Boltzmann machines. The archive
-  includes an independently confirmed weighted sparse-Ising experiment and a
-  separate exhaustive supporting study that records a graph-selection boundary.
+  includes a prospectively frozen weighted sparse-Ising confirmation on a
+  separately generated target ensemble and a separate exhaustive supporting
+  study that records a graph-selection boundary.
 keywords:
   - quantum Boltzmann machine
-  - Gibbs state
+  - commuting Gibbs model
+  - Gibbs-state preparation
+  - sparse Ising optimization
   - representation alignment
   - natural gradient
-  - Ising model
+  - graphical models
+  - maximum spanning tree
   - treewidth
   - q-sample
   - reproducible research
