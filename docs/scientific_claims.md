@@ -53,3 +53,7 @@ These mechanism results are not presented as universal explanations of all failu
 ## Explicit nonclaims
 
 No result in this repository demonstrates quantum speedup, general NP-hard problem solving, a standard asymptotic barren plateau, or a universally optimal graph-selection rule.
+
+## Research context
+
+Established prior work and the boundary between known QBM methods and this repository's contribution are summarized in [research context](research_context.md). A direct map from every public claim to its protocol, raw evidence, analysis code, and validator is provided in the [claim-to-evidence map](evidence_map.md).

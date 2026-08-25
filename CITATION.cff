@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, data, or figures, please cite this repository."
+message: "If you use the software, data, figures, protocols, or derived results, cite this repository; see CITATION.md for copy-ready formats."
 title: "Representation Alignment in Commuting Quantum Boltzmann Machines"
 type: software
 authors:

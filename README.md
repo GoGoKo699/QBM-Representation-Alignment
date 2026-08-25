@@ -3,6 +3,9 @@
 [![tests](https://github.com/GoGoKo699/QBM-Representation-Alignment/actions/workflows/tests.yml/badge.svg)](https://github.com/GoGoKo699/QBM-Representation-Alignment/actions/workflows/tests.yml)
 [![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](LICENSE)
 [![Python 3.10-3.13](https://img.shields.io/badge/Python-3.10--3.13-blue.svg)](pyproject.toml)
+[![Cite](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.md)
+
+**Start here:** [evidence map](docs/evidence_map.md) · [scientific claims](docs/scientific_claims.md) · [research context](docs/research_context.md) · [theory](docs/theory.md) · [statistics](docs/statistical_analysis.md) · [reproduce](docs/reproducibility.md) · [how to cite](CITATION.md)
 
 This repository studies a concrete ansatz-design question:
 
@@ -38,7 +41,7 @@ where $\gamma$ is the spectral gap. Every target has one exact ground state, so 
 |---|---:|---:|---:|---:|
 | Adam, random | 0.83% | 0.83% | 0.83% | 11.67% |
 | Adam, target biased | 3.33% | 17.50% | **35.83%** | 70.00% |
-| Exact natural, target biased | 29.17% | 57.50% | **80.83%** | 100.00% |
+| Exact-natural oracle, target biased | 29.17% | 57.50% | **80.83%** | 100.00% |
 
 The three prespecified paired effects are:
 
@@ -47,6 +50,8 @@ The three prespecified paired effects are:
 | Max-weight tree minus chain, target-biased Adam | **+32.50 points** | `[+15.83, +50.83]` |
 | Max-weight tree minus random target tree, target-biased Adam | **+18.33 points** | `[+6.67, +31.67]` |
 | Max-weight tree minus chain, exact natural gradient | **+51.67 points** | `[+35.00, +66.67]` |
+
+Here, **target biased** means $\theta^{(0)}=c_G+0.3\xi$, with one matched all-pairs Gaussian vector restricted to each representation. The **exact-natural oracle** uses the exact Fisher pseudoinverse and exact Armijo energy evaluation; it is a geometric ceiling, not a practical sampled-cost claim.
 
 The chain and both trees have:
 
@@ -65,6 +70,16 @@ The full target graphs have treewidth $3$–$5$ and require 75–159 conditional
 - [Preparation resources](results/confirmatory/preparation_resources.csv)
 - [Scientific validation](results/confirmatory/validation.json)
 - [Experiment protocol](experiments/sparse_ising_confirmation/protocol/protocol.md)
+- [Statistical analysis](docs/statistical_analysis.md)
+- [Claim-to-evidence map](docs/evidence_map.md)
+
+## How to cite
+
+GitHub reads [`CITATION.cff`](CITATION.cff) and exposes a **Cite this repository** control on the repository page. Copy-ready citation text and BibTeX are also provided in [`CITATION.md`](CITATION.md).
+
+> Lin, R. (2026). *Representation Alignment in Commuting Quantum Boltzmann Machines* (Version 1.0.0) [Computer software]. GitHub. https://github.com/GoGoKo699/QBM-Representation-Alignment
+
+When citing a precisely reproduced result, include the release tag or full commit SHA used.
 
 ## Geometry
 
@@ -96,7 +111,7 @@ $$
 
 Full alignment gives $R_G=0$, so the Fisher natural-gradient direction is the target coefficient direction. Partial representations retain a state-dependent omitted-cost covariance term. This explains why representations with the same width and number of parameters can have different trainability.
 
-See [theory](docs/theory.md).
+See [theory](docs/theory.md). For established prior work and the novelty boundary, see [research context](docs/research_context.md).
 
 ## Repository structure
 
@@ -190,4 +205,4 @@ See [limitations](docs/limitations.md).
 
 ## Citation, reuse, and contributions
 
-Citation metadata are in [`CITATION.cff`](CITATION.cff). Code, data, figures, and documentation are released under the [BSD 3-Clause License](LICENSE). Bug reports, reproducibility questions, and focused contributions are welcome; see [`CONTRIBUTING.md`](CONTRIBUTING.md).
+Use [`CITATION.md`](CITATION.md) or GitHub's **Cite this repository** control for copy-ready citation formats; machine-readable metadata are in [`CITATION.cff`](CITATION.cff). Code, data, figures, and documentation are released under the [BSD 3-Clause License](LICENSE). Bug reports, reproducibility questions, and focused contributions are welcome; see [`CONTRIBUTING.md`](CONTRIBUTING.md).

@@ -28,15 +28,31 @@ REQUIRED_FILES = (
     ".github/workflows/tests.yml",
     ".gitignore",
     "CITATION.cff",
+    "CITATION.md",
     "CONTRIBUTING.md",
     "LICENSE",
     "README.md",
+    "docs/evidence_map.md",
+    "docs/research_context.md",
+    "docs/statistical_analysis.md",
     "llms.txt",
     "pyproject.toml",
     "scripts/release_check.sh",
     "src/qbm_alignment/__init__.py",
 )
 TEXT_SUFFIXES = {".cff", ".json", ".md", ".py", ".toml", ".txt", ".yaml", ".yml"}
+EXCLUDED_RUNTIME_DIRS = {".git", ".venv", ".pytest_cache", "__pycache__", "build", "dist"}
+
+
+def _repository_files():
+    for path in ROOT.rglob("*"):
+        if not path.is_file():
+            continue
+        relative = path.relative_to(ROOT)
+        directories = relative.parts[:-1]
+        if any(part in EXCLUDED_RUNTIME_DIRS or part.endswith(".egg-info") for part in directories):
+            continue
+        yield path
 
 
 def _run_link_checker() -> int:
@@ -97,25 +113,25 @@ def _validate_layout() -> dict[str, object]:
 
     zero_byte_files = sorted(
         path.relative_to(ROOT).as_posix()
-        for path in ROOT.rglob("*")
-        if path.is_file() and path.stat().st_size == 0
+        for path in _repository_files()
+        if path.stat().st_size == 0
     )
     if zero_byte_files:
         raise AssertionError(f"zero-byte files present: {zero_byte_files}")
 
     oversized_files = sorted(
         path.relative_to(ROOT).as_posix()
-        for path in ROOT.rglob("*")
-        if path.is_file() and path.stat().st_size > 100 * 1024 * 1024
+        for path in _repository_files()
+        if path.stat().st_size > 100 * 1024 * 1024
     )
     if oversized_files:
         raise AssertionError(f"files exceed GitHub's 100 MiB limit: {oversized_files}")
 
     absolute_path_hits: list[str] = []
-    for path in ROOT.rglob("*"):
+    for path in _repository_files():
         if path.resolve() == Path(__file__).resolve():
             continue
-        if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
+        if path.suffix.lower() not in TEXT_SUFFIXES:
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
         container_prefix = "/" + "mnt/data/"
@@ -126,7 +142,7 @@ def _validate_layout() -> dict[str, object]:
         raise AssertionError(f"container-local paths present: {absolute_path_hits}")
 
     return {
-        "file_count": sum(path.is_file() for path in ROOT.rglob("*")),
+        "file_count": sum(1 for _path in _repository_files()),
         "zero_byte_files": 0,
         "oversized_files": 0,
         "container_local_paths": 0,

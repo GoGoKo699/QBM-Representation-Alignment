@@ -5,7 +5,7 @@ from pathlib import Path
 
 try:
     import tomllib
-except ModuleNotFoundError:  # Python 3.10 compatibility
+except ModuleNotFoundError:  # Python 3.10
     import tomli as tomllib
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,10 +19,14 @@ def test_canonical_public_files_exist():
         ".github/workflows/tests.yml",
         "README.md",
         "CITATION.cff",
+        "CITATION.md",
         "CONTRIBUTING.md",
         "LICENSE",
         "llms.txt",
+        "docs/evidence_map.md",
         "docs/scientific_claims.md",
+        "docs/research_context.md",
+        "docs/statistical_analysis.md",
         "docs/theory.md",
         "docs/preparation.md",
         "docs/reproducibility.md",
@@ -56,3 +60,14 @@ def test_license_is_bsd_three_clause():
     text = (ROOT / "LICENSE").read_text(encoding="utf-8")
     assert text.startswith("BSD 3-Clause License\n")
     assert "Copyright (c) 2026, Ruge Lin" in text
+
+
+def test_citation_is_easy_to_find_and_versioned():
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    citation = (ROOT / "CITATION.md").read_text(encoding="utf-8")
+    cff = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
+    assert "## How to cite" in readme
+    assert "Cite this repository" in readme
+    assert "Version 1.0.0" in citation
+    assert "@software" in citation
+    assert "see CITATION.md" in cff

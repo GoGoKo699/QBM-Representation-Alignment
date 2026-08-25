@@ -12,7 +12,10 @@ trainability and exact Gibbs/q-sample preparation?
 
 Canonical entry points:
 - README.md: confirmed result, commands, and repository map.
+- docs/evidence_map.md: claim-to-protocol/data/code/validation navigation.
 - docs/scientific_claims.md: claim hierarchy and evidence boundaries.
+- docs/research_context.md: established literature and novelty boundary.
+- docs/statistical_analysis.md: paired instance-cluster bootstrap and Holm step-down rule.
 - docs/theory.md: aligned and partially aligned Gibbs geometry.
 - experiments/sparse_ising_confirmation/: independent primary experiment.
 - results/confirmatory/: canonical compact result tables.
@@ -32,3 +35,7 @@ Important boundaries:
 - no quantum advantage or asymptotic scaling is claimed;
 - full graphs remain more trainable than sparse trees;
 - the max-weight tree is an empirically supported design rule, not a universal theorem.
+
+Citation:
+- CITATION.md: copy-ready citation and BibTeX.
+- CITATION.cff: machine-readable GitHub citation metadata.
