@@ -6,7 +6,7 @@ This page gives reviewers, reusers, and first-time readers the shortest path fro
 
 **Claim.** At fixed treewidth, interaction count, and parameter count, a target-supported spanning-tree Gibbs representation trains better than a generic chain; selecting the spanning tree by maximum absolute target-coupling weight improves further over a prespecified random target-supported tree.
 
-The protocol and seed commitments were frozen before the separately generated target ensemble was evaluated. This is an internal confirmation on unseen targets, not an external replication. In code and result files, `problem_tree` denotes the maximum-$|J|$ spanning tree (`MAXJ`).
+The protocol and seed commitments were frozen before the separately generated target ensemble was evaluated. This is an internal confirmation on unseen targets, not an external replication. In code and result files, `problem_tree` denotes the maximum- $|J|$ spanning tree (`MAXJ`).
 
 | Evidence layer | Canonical location |
 |---|---|
