@@ -66,9 +66,9 @@ conditional angles:  31
 CNOT upper count:    30
 ```
 
-The full target graphs have treewidth $3$–$5$ and require 75–159 conditional angles, with median 131.
+The full target graphs have treewidth between 3 and 5 and require 75–159 conditional angles, with median 131.
 
-In source code and CSV files, `problem_tree` denotes the deterministic maximum-$|J|$ target-supported spanning tree, abbreviated `MAXJ` in the documentation.
+In source code and CSV files, `problem_tree` denotes the deterministic target-supported spanning tree obtained by maximizing edge weight $|J|$, abbreviated `MAXJ` in the documentation.
 
 - [Primary effects](results/confirmatory/primary_effects.csv)
 - [Aggregate outcomes](results/confirmatory/aggregate.csv)
