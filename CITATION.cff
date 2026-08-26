@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use the software, data, figures, protocols, or derived results, cite this repository and identify the release tag or commit; see CITATION.md for copy-ready formats."
+message: "If you use the software, data, figures, protocols, or derived results, cite release v1.1.0 and identify any later commit used; see CITATION.md for copy-ready formats."
 title: "Representation Alignment in Commuting Quantum Boltzmann Machines"
 type: software
 authors:
@@ -7,9 +7,9 @@ authors:
     given-names: Ruge
     affiliation: "The Hong Kong University of Science and Technology (Guangzhou)"
 version: 1.1.0
-date-released: 2026-08-25
+date-released: 2026-08-26
 repository-code: "https://github.com/GoGoKo699/QBM-Representation-Alignment"
-url: "https://github.com/GoGoKo699/QBM-Representation-Alignment"
+url: "https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.1.0"
 license: BSD-3-Clause
 abstract: >-
   Reproducible theory, experiments, and exact preparation-resource analyses for
