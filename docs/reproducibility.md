@@ -15,13 +15,15 @@ The maintained dependencies are listed in `pyproject.toml` and `requirements.txt
 
 ## Record the exact version
 
-Before running a calculation, record the checked-out commit:
+The complete archive is published as GitHub release [`v1.1.0`](https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.1.0). The primary confirmed `MAXJ` result in its original release state is preserved as [`v1.0.0`](https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.0.0).
+
+Before running a calculation from a later checkout, record its commit:
 
 ```bash
 git rev-parse HEAD
 ```
 
-The primary confirmed `MAXJ` result is preserved in GitHub release `v1.0.0`. For the expanded Version 1.1.0 archive, use a matching release tag when available or record the full commit SHA. Citation formats and version-selection guidance are in [`CITATION.md`](../CITATION.md).
+Citation formats and version-selection guidance are in [`CITATION.md`](../CITATION.md). Release contents are summarized in [`CHANGELOG.md`](../CHANGELOG.md).
 
 ## Fast validation
 

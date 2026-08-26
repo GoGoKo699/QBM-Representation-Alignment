@@ -1,11 +1,12 @@
 # Representation Alignment in Commuting Quantum Boltzmann Machines
 
 [![tests](https://github.com/GoGoKo699/QBM-Representation-Alignment/actions/workflows/tests.yml/badge.svg)](https://github.com/GoGoKo699/QBM-Representation-Alignment/actions/workflows/tests.yml)
+[![Release: v1.1.0](https://img.shields.io/badge/release-v1.1.0-blue.svg)](https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.1.0)
 [![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](LICENSE)
 [![Python 3.10-3.13](https://img.shields.io/badge/Python-3.10--3.13-blue.svg)](pyproject.toml)
 [![Cite](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.md)
 
-**Reader routes:** [confirmed result](#confirmed-result) · [claim-to-evidence map](docs/evidence_map.md) · [scope and nonclaims](docs/scientific_claims.md) · [research context](docs/research_context.md) · [reproduce](docs/reproducibility.md) · [cite](CITATION.md)
+**Reader routes:** [confirmed result](#confirmed-result) · [claim-to-evidence map](docs/evidence_map.md) · [scope and nonclaims](docs/scientific_claims.md) · [research context](docs/research_context.md) · [reproduce](docs/reproducibility.md) · [release notes](CHANGELOG.md) · [cite](CITATION.md)
 
 This repository studies a concrete ansatz-design question:
 
@@ -65,9 +66,9 @@ conditional angles:  31
 CNOT upper count:    30
 ```
 
-The full target graphs have treewidth 3 - 5 and require 75–159 conditional angles, with median 131.
+The full target graphs have treewidth between 3 and 5 and require 75–159 conditional angles, with median 131.
 
-In source code and CSV files, `problem_tree` denotes the deterministic maximum- $|J|$ target-supported spanning tree, abbreviated `MAXJ` in the documentation.
+In source code and CSV files, `problem_tree` denotes the deterministic target-supported spanning tree obtained by maximizing edge weight $|J|$, abbreviated `MAXJ` in the documentation.
 
 - [Primary effects](results/confirmatory/primary_effects.csv)
 - [Aggregate outcomes](results/confirmatory/aggregate.csv)
@@ -93,7 +94,7 @@ GitHub reads [`CITATION.cff`](CITATION.cff) and exposes a **Cite this repository
 
 > Lin, R. (2026). *Representation Alignment in Commuting Quantum Boltzmann Machines* (Version 1.1.0) [Computer software]. GitHub. https://github.com/GoGoKo699/QBM-Representation-Alignment
 
-For the primary confirmed `MAXJ` result alone, the preserved GitHub release is [`v1.0.0`](https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.0.0). For the expanded Version 1.1.0 archive, cite a matching release tag when available; otherwise include the full commit SHA. See [`CITATION.md`](CITATION.md) for the exact choice.
+For the complete archive, cite the published [`v1.1.0`](https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.1.0) release. For the primary confirmed `MAXJ` result in its original release state, cite [`v1.0.0`](https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.0.0). See [`CITATION.md`](CITATION.md) for copy-ready formats and exact-result guidance.
 
 ## Geometry
 

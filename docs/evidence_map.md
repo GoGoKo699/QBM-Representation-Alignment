@@ -6,7 +6,7 @@ This page gives reviewers, reusers, and first-time readers the shortest path fro
 
 **Claim.** At fixed treewidth, interaction count, and parameter count, a target-supported spanning-tree Gibbs representation trains better than a generic chain; selecting the spanning tree by maximum absolute target-coupling weight improves further over a prespecified random target-supported tree.
 
-The protocol and seed commitments were frozen before the separately generated target ensemble was evaluated. This is an internal confirmation on unseen targets, not an external replication. In code and result files, `problem_tree` denotes the maximum- $|J|$ spanning tree (`MAXJ`).
+The protocol and seed commitments were frozen before the separately generated target ensemble was evaluated. This is an internal confirmation on unseen targets, not an external replication. In code and result files, `problem_tree` denotes the target-supported spanning tree that maximizes edge weight $|J|$ (`MAXJ`).
 
 | Evidence layer | Canonical location |
 |---|---|
@@ -95,4 +95,4 @@ See [`docs/reproducibility.md`](reproducibility.md) for the complete workflow.
 
 ## Citation
 
-Use [`CITATION.md`](../CITATION.md) for copy-ready APA-style and BibTeX entries and for choosing between release `v1.0.0`, a later release tag, or a full commit SHA. Machine-readable metadata are in [`CITATION.cff`](../CITATION.cff).
+Use [`CITATION.md`](../CITATION.md) for copy-ready APA-style and BibTeX entries. Cite release `v1.1.0` for the complete archive or `v1.0.0` for the primary confirmed `MAXJ` result in its original release state. Machine-readable metadata are in [`CITATION.cff`](../CITATION.cff).

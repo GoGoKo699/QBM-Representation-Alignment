@@ -1,7 +1,7 @@
 {
   "layout": {
     "container_local_paths": 0,
-    "file_count": 425,
+    "file_count": 426,
     "oversized_files": 0,
     "zero_byte_files": 0
   },
@@ -103,6 +103,8 @@
   "release_metadata": {
     "license": "BSD-3-Clause",
     "package_name": "qbm-representation-alignment",
+    "release_date": "2026-08-26",
+    "release_url": "https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.1.0",
     "repository_url": "https://github.com/GoGoKo699/QBM-Representation-Alignment",
     "version": "1.1.0"
   },

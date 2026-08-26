@@ -3,15 +3,17 @@
 Repository URL:
 https://github.com/GoGoKo699/QBM-Representation-Alignment
 
-Release metadata:
-1.1.0 (2026-08-25), BSD-3-Clause
+Published release:
+v1.1.0 (2026-08-26), BSD-3-Clause
+https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.1.0
 
 Primary question:
 How does the interaction graph of a commuting QBM affect finite-budget
 trainability and exact Gibbs/q-sample preparation?
 
 Canonical entry points:
-- README.md: confirmed result, commands, repository map, and citation route.
+- README.md: confirmed result, commands, repository map, release notes, and citation route.
+- CHANGELOG.md: release contents and scientific scope changes.
 - docs/evidence_map.md: claim-to-protocol/data/code/validation navigation.
 - docs/scientific_claims.md: claim hierarchy and evidence boundaries.
 - docs/research_context.md: established literature, classical tree comparison, and novelty boundary.
@@ -52,5 +54,6 @@ Important boundaries:
 Citation:
 - CITATION.md: copy-ready citation, BibTeX, and version-selection guidance.
 - CITATION.cff: machine-readable GitHub citation metadata.
-- use release v1.0.0 for the primary confirmed MAXJ result;
-- for a later repository state, identify the matching release tag or full commit SHA.
+- cite release v1.1.0 for the complete archive.
+- cite release v1.0.0 for the primary confirmed MAXJ result in its original release state.
+- identify the full commit SHA only when using a later unreleased state.

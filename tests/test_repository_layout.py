@@ -11,13 +11,16 @@ except ModuleNotFoundError:  # Python 3.10
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED_VERSION = "1.1.0"
+EXPECTED_RELEASE_DATE = "2026-08-26"
 EXPECTED_URL = "https://github.com/GoGoKo699/QBM-Representation-Alignment"
+EXPECTED_RELEASE_URL = f"{EXPECTED_URL}/releases/tag/v{EXPECTED_VERSION}"
 
 
 def test_canonical_public_files_exist():
     required = [
         ".gitattributes",
         ".github/workflows/tests.yml",
+        "CHANGELOG.md",
         "README.md",
         "CITATION.cff",
         "CITATION.md",
@@ -58,6 +61,7 @@ def test_release_metadata_is_consistent():
 
     citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
     assert f"version: {EXPECTED_VERSION}" in citation
+    assert f"date-released: {EXPECTED_RELEASE_DATE}" in citation
     assert f'repository-code: "{EXPECTED_URL}"' in citation
     assert "license: BSD-3-Clause" in citation
 
@@ -72,13 +76,17 @@ def test_citation_is_easy_to_find_and_versioned():
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     citation = (ROOT / "CITATION.md").read_text(encoding="utf-8")
     cff = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
+    changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
     assert "## How to cite" in readme
     assert "Cite this repository" in readme
+    assert EXPECTED_RELEASE_URL in readme
     assert f"Version {EXPECTED_VERSION}" in citation
+    assert EXPECTED_RELEASE_URL in citation
     assert "@software" in citation
     assert "v1.0.0" in citation
     assert "full commit SHA" in citation
     assert "see CITATION.md" in cff
+    assert f"## v{EXPECTED_VERSION}" in changelog
 
 
 def test_deep_entry_points_link_back_to_citation():
