@@ -15,7 +15,9 @@ except ModuleNotFoundError:  # Python 3.10 compatibility
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED_NAME = "qbm-representation-alignment"
 EXPECTED_VERSION = "1.1.0"
+EXPECTED_RELEASE_DATE = "2026-08-26"
 EXPECTED_URL = "https://github.com/GoGoKo699/QBM-Representation-Alignment"
+EXPECTED_RELEASE_URL = f"{EXPECTED_URL}/releases/tag/v{EXPECTED_VERSION}"
 EXPECTED_LICENSE = "BSD-3-Clause"
 VALIDATION_RECORDS = {
     "confirmatory": ROOT / "results" / "confirmatory" / "validation.json",
@@ -28,6 +30,7 @@ REQUIRED_FILES = (
     ".gitattributes",
     ".github/workflows/tests.yml",
     ".gitignore",
+    "CHANGELOG.md",
     "CITATION.cff",
     "CITATION.md",
     "CONTRIBUTING.md",
@@ -91,6 +94,7 @@ def _validate_release_metadata() -> dict[str, object]:
 
     citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
     assert _yaml_scalar(citation, "version") == EXPECTED_VERSION
+    assert _yaml_scalar(citation, "date-released") == EXPECTED_RELEASE_DATE
     assert _yaml_scalar(citation, "repository-code") == EXPECTED_URL
     assert _yaml_scalar(citation, "url") == EXPECTED_URL
     assert _yaml_scalar(citation, "license") == EXPECTED_LICENSE
@@ -100,12 +104,19 @@ def _validate_release_metadata() -> dict[str, object]:
     assert "Copyright (c) 2026, Ruge Lin" in license_text
 
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    citation_guide = (ROOT / "CITATION.md").read_text(encoding="utf-8")
+    changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
     assert EXPECTED_URL in readme
+    assert EXPECTED_RELEASE_URL in readme
+    assert EXPECTED_RELEASE_URL in citation_guide
+    assert f"## v{EXPECTED_VERSION}" in changelog
     assert "BSD 3-Clause License" in readme
 
     return {
         "package_name": EXPECTED_NAME,
         "version": EXPECTED_VERSION,
+        "release_date": EXPECTED_RELEASE_DATE,
+        "release_url": EXPECTED_RELEASE_URL,
         "repository_url": EXPECTED_URL,
         "license": EXPECTED_LICENSE,
     }
