@@ -9,7 +9,7 @@ authors:
 version: 1.1.0
 date-released: 2026-08-26
 repository-code: "https://github.com/GoGoKo699/QBM-Representation-Alignment"
-url: "https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.1.0"
+url: "https://github.com/GoGoKo699/QBM-Representation-Alignment"
 license: BSD-3-Clause
 abstract: >-
   Reproducible theory, experiments, and exact preparation-resource analyses for
