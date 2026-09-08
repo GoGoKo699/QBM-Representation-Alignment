@@ -6,7 +6,7 @@
 [![Python 3.10-3.13](https://img.shields.io/badge/Python-3.10--3.13-blue.svg)](pyproject.toml)
 [![Cite](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.md)
 
-**Reader routes:** [confirmed result](#confirmed-result) · [claim-to-evidence map](docs/evidence_map.md) · [scope and nonclaims](docs/scientific_claims.md) · [research context](docs/research_context.md) · [reproduce](docs/reproducibility.md) · [release notes](CHANGELOG.md) · [cite](CITATION.md)
+**Reader routes:** [confirmed result](#confirmed-result) · [reuse guide](docs/reuse.md) · [claim-to-evidence map](docs/evidence_map.md) · [scope and nonclaims](docs/scientific_claims.md) · [research context](docs/research_context.md) · [reproduce](docs/reproducibility.md) · [release notes](CHANGELOG.md) · [cite](CITATION.md)
 
 This repository studies a concrete ansatz-design question:
 
@@ -17,6 +17,8 @@ The central result comes from a prospectively frozen confirmation on 24 separate
 At the same treewidth, interaction count, and parameter count, a target-supported spanning-tree representation trains substantially better than a generic chain. Selecting the tree by maximum absolute target-coupling weight improves further over a prespecified random target-supported tree. The full target graph remains the trainability ceiling, but requires a larger exact conditional-rotation description.
 
 The work concerns a commuting, classically tractable sector of quantum Boltzmann machines. It provides exact geometry, controlled optimization evidence, and explicit q-sample preparation resources. It does **not** claim quantum speedup.
+
+**Looking for reusable code or benchmark data?** The [question-oriented reuse guide](docs/reuse.md) covers sparse Ising graph selection, MAXJ baselines, Fisher natural gradients, same-batch covariance identities, q-sample gate accounting, and the negative cooling-power selector study. A small [plain-text retrieval map](llms.txt) links directly to documentation and version-pinned evidence. The [search and AI discovery guide](docs/discoverability.md) describes the optional project-page deployment and how to check actual retrieval; metadata alone do not guarantee discovery.
 
 ![Confirmatory success by representation](figures/success_by_representation.png)
 
