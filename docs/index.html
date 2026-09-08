@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparse QBM graph-selection benchmark, natural gradients and q-sample resources</title>
+<meta name="description" content="Research code and data for commuting quantum Boltzmann machines: MAXJ spanning-tree benchmarks, Fisher natural gradients, and exact logical Gibbs q-sample resources.">
+<link rel="canonical" href="https://gogoko699.github.io/QBM-Representation-Alignment/">
+<link rel="describedby" href="llms.txt" type="text/plain">
+<link rel="alternate" type="text/markdown" href="https://raw.githubusercontent.com/GoGoKo699/QBM-Representation-Alignment/main/docs/reuse.md" title="Markdown reuse guide">
+<style>
+:root { color-scheme: light dark; }
+body { font: 1rem/1.65 system-ui, sans-serif; max-width: 54rem; margin: auto; padding: 1.5rem; }
+h1 { font-size: 1.9rem; line-height: 1.25; } h2 { margin-top: 2rem; line-height: 1.3; }
+nav a { display: inline-block; margin-right: 1rem; } a { overflow-wrap: anywhere; }
+.table-wrap { overflow-x: auto; } table { border-collapse: collapse; width: 100%; }
+th, td { border-bottom: 1px solid; padding: .5rem; text-align: left; }
+code, pre { font-family: ui-monospace, monospace; } pre { overflow-x: auto; padding: .8rem; border: 1px solid; }
+footer { margin-top: 2.5rem; border-top: 1px solid; padding-top: 1rem; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://gogoko699.github.io/QBM-Representation-Alignment/#software",
+      "name": "Representation Alignment in Commuting Quantum Boltzmann Machines",
+      "alternateName": "QBM-Representation-Alignment",
+      "description": "Research code for a finite-benchmark comparison of sparse Ising Gibbs representations, Fisher natural-gradient geometry, and exact logical q-sample preparation. Commuting models; no quantum advantage claim.",
+      "codeRepository": "https://github.com/GoGoKo699/QBM-Representation-Alignment",
+      "url": "https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.1.0",
+      "version": "1.1.0",
+      "datePublished": "2026-08-26",
+      "author": {"@type": "Person", "name": "Ruge Lin"},
+      "license": "https://github.com/GoGoKo699/QBM-Representation-Alignment/blob/1fc02e89f283225b1d3503749b33c62c30d0a550/LICENSE",
+      "programmingLanguage": "Python",
+      "identifier": "Git commit 1fc02e89f283225b1d3503749b33c62c30d0a550",
+      "keywords": ["quantum Boltzmann machine", "commuting Gibbs model", "MAXJ", "maximum spanning tree", "natural gradient", "q-sample", "treewidth"]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://gogoko699.github.io/QBM-Representation-Alignment/#benchmark",
+      "name": "Weighted sparse-Ising representation-alignment benchmark: compact tables",
+      "description": "Compact outcome, paired-effect, and logical preparation-resource tables from 24 separately generated weighted sparse-Ising targets at n=16, five parameter seeds and 1,440 trajectories. Prospectively frozen internal confirmation, not external replication. Optimizer and initialization conditions are separated. This record does not distribute the exhaustive temperature-tree atlas.",
+      "url": "https://gogoko699.github.io/QBM-Representation-Alignment/#benchmark",
+      "version": "1.1.0",
+      "datePublished": "2026-08-26",
+      "creator": {"@type": "Person", "name": "Ruge Lin"},
+      "license": "https://github.com/GoGoKo699/QBM-Representation-Alignment/blob/1fc02e89f283225b1d3503749b33c62c30d0a550/LICENSE",
+      "isAccessibleForFree": true,
+      "measurementTechnique": "Exact classical enumeration of finite commuting Gibbs models; finite-budget optimizer trajectories and logical conditional-rotation accounting.",
+      "variableMeasured": ["success_rate", "point_difference", "conditional_angle_entries", "gray_code_cnot_upper_bound"],
+      "isBasedOn": "https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.1.0",
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "Aggregate outcomes",
+          "encodingFormat": "text/csv",
+          "contentUrl": "https://raw.githubusercontent.com/GoGoKo699/QBM-Representation-Alignment/1fc02e89f283225b1d3503749b33c62c30d0a550/results/confirmatory/aggregate.csv"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Primary paired effects",
+          "encodingFormat": "text/csv",
+          "contentUrl": "https://raw.githubusercontent.com/GoGoKo699/QBM-Representation-Alignment/1fc02e89f283225b1d3503749b33c62c30d0a550/results/confirmatory/primary_effects.csv"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Logical preparation resources",
+          "encodingFormat": "text/csv",
+          "contentUrl": "https://raw.githubusercontent.com/GoGoKo699/QBM-Representation-Alignment/1fc02e89f283225b1d3503749b33c62c30d0a550/results/confirmatory/preparation_resources.csv"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header id="software">
+<h1>Representation Alignment in Commuting Quantum Boltzmann Machines</h1>
+<p>Research code and data by Ruge Lin. Published evidence: <a href="https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.1.0">v1.1.0, 26 August 2026</a>. BSD 3-Clause.</p>
+<nav aria-label="Research archive"><a href="#uses">Use cases</a><a href="#benchmark">Benchmark data</a><a href="#limits">Limits</a><a href="#cite">Citation</a><a href="https://github.com/GoGoKo699/QBM-Representation-Alignment">Source repository</a></nav>
+</header>
+<main>
+<section id="uses">
+<h2>When is this archive useful?</h2>
+<p>Use it when comparing sparse interaction graphs for an Ising energy-optimization ansatz, checking Fisher natural-gradient identities in a commuting Gibbs family, or estimating the conditional-rotation cost of a coherent q-sample. It is a Python research archive, not a general-purpose noncommuting QBM library.</p>
+<p>The <a href="https://github.com/GoGoKo699/QBM-Representation-Alignment/blob/main/docs/reuse.md">question-oriented reuse guide</a> maps these tasks to code and evidence. The <a href="llms.txt">plain-text retrieval map</a> provides direct links to Markdown documents and version-pinned numerical tables.</p>
+</section>
+<section id="benchmark">
+<h2>Weighted sparse-Ising representation-alignment benchmark: compact tables</h2>
+<p>The prospectively frozen internal confirmation compares 24 separately generated weighted sparse-Ising targets at n=16 using five parameter seeds and 1,440 trajectories. The representations are a native chain, a random target-supported tree, a maximum-absolute-coupling target-supported tree (MAXJ), and the full target graph. This is not an external replication.</p>
+<p>Success means expected energy minus exact ground energy, divided by the spectral gap, is at most 0.1. For these unique-ground-state targets it certifies ground-state probability at least 0.9.</p>
+<div class="table-wrap">
+<table>
+<caption>Success rates under the frozen optimizer and initialization conditions</caption>
+<thead><tr><th scope="col">Condition</th><th scope="col">Chain</th><th scope="col">Random tree</th><th scope="col">MAXJ</th><th scope="col">Full graph</th></tr></thead>
+<tbody>
+<tr><th scope="row">Adam, random</th><td data-key="adam:random:chain">0.83%</td><td data-key="adam:random:random_tree">0.83%</td><td data-key="adam:random:problem_tree">0.83%</td><td data-key="adam:random:full">11.67%</td></tr>
+<tr><th scope="row">Adam, target biased</th><td data-key="adam:target_biased:chain">3.33%</td><td data-key="adam:target_biased:random_tree">17.50%</td><td data-key="adam:target_biased:problem_tree">35.83%</td><td data-key="adam:target_biased:full">70.00%</td></tr>
+<tr><th scope="row">Exact-natural oracle, target biased</th><td data-key="exact_natural:target_biased:chain">29.17%</td><td data-key="exact_natural:target_biased:random_tree">57.50%</td><td data-key="exact_natural:target_biased:problem_tree">80.83%</td><td data-key="exact_natural:target_biased:full">100.00%</td></tr>
+</tbody>
+</table>
+</div>
+<p>Target-biased initialization uses the retained target coefficient vector plus matched Gaussian noise. The exact-natural oracle uses exact moments and line-search evaluations, not a practical sampled-cost implementation. The sparse models each use 31 parameters and 31 logical conditional-angle entries, with a CNOT upper count of 30. Full graphs use 75-159 angle entries under the stored orders, with median 131. These are logical resources, not hardware or fault-tolerant costs.</p>
+<p>Download the compact source tables: <a href="https://raw.githubusercontent.com/GoGoKo699/QBM-Representation-Alignment/1fc02e89f283225b1d3503749b33c62c30d0a550/results/confirmatory/aggregate.csv">Aggregate outcomes (CSV)</a>, <a href="https://raw.githubusercontent.com/GoGoKo699/QBM-Representation-Alignment/1fc02e89f283225b1d3503749b33c62c30d0a550/results/confirmatory/primary_effects.csv">Primary paired effects (CSV)</a>, and <a href="https://raw.githubusercontent.com/GoGoKo699/QBM-Representation-Alignment/1fc02e89f283225b1d3503749b33c62c30d0a550/results/confirmatory/preparation_resources.csv">Logical preparation resources (CSV)</a>. The <a href="https://github.com/GoGoKo699/QBM-Representation-Alignment/blob/main/docs/evidence_map.md">evidence map</a> links protocols, raw trajectories, analysis, and validators.</p>
+</section>
+<section id="limits">
+<h2>What the results do and do not establish</h2>
+<p>MAXJ is a deterministic baseline supported by this finite benchmark. It is not a universally optimal tree selector or a Chow-Liu forward-KL-optimal estimator. No quantum speedup, favorable asymptotic scaling, hardware advantage, or general noncommuting training method is demonstrated. The archive is not a peer-reviewed journal publication.</p>
+<p>A coherent q-sample reproduces classical sampling probabilities and diagonal-observable expectations; it is not the mixed Gibbs state. See the <a href="https://github.com/GoGoKo699/QBM-Representation-Alignment/blob/main/docs/preparation.md">preparation definitions and purification accounting</a>.</p>
+<p>A separate <a href="https://github.com/GoGoKo699/QBM-Representation-Alignment/blob/main/studies/temperature_tree_geometry/README.md">temperature-dependent tree study</a> uses ten reused n=8 instances. At the certification temperature, cooling-power-optimal trees have worse projected energies than both best hot-optimal and forward-KL-optimal trees on all ten instances. This is developmental evidence against that criterion, not a universal impossibility result. The full generated atlas is not distributed here.</p>
+<p><strong>Reproduction note:</strong> Packaged-result checks do not rerun the exhaustive computation. The v1.1.0 full temperature-study regeneration recipe has a known cleanup/validation mismatch. Use the packaged summaries for inspection and read the <a href="https://github.com/GoGoKo699/QBM-Representation-Alignment/blob/main/docs/reuse.md">reuse guide</a> before attempting that route.</p>
+</section>
+<section id="cite">
+<h2>How to cite this research archive</h2>
+<p>Lin, R. (2026). <cite>Representation Alignment in Commuting Quantum Boltzmann Machines</cite> (Version 1.1.0) [Computer software]. GitHub.</p>
+<pre><code>@software{lin_2026_qbm_representation_alignment,
+  author  = {Ruge Lin},
+  title   = {Representation Alignment in Commuting Quantum Boltzmann Machines},
+  year    = {2026},
+  version = {1.1.0},
+  url     = {https://github.com/GoGoKo699/QBM-Representation-Alignment/releases/tag/v1.1.0},
+  license = {BSD-3-Clause}
+}</code></pre>
+<p>Evidence commit: <code>1fc02e89f283225b1d3503749b33c62c30d0a550</code>. Name the result file or supporting study when citing a specific finding. For later changes, also identify the commit used. The original primary result remains in v1.0.0. See <a href="https://github.com/GoGoKo699/QBM-Representation-Alignment/blob/main/CITATION.md">citation guidance</a>, <a href="https://raw.githubusercontent.com/GoGoKo699/QBM-Representation-Alignment/main/CITATION.cff">CITATION.cff</a>, and the <a href="https://github.com/GoGoKo699/QBM-Representation-Alignment/blob/1fc02e89f283225b1d3503749b33c62c30d0a550/LICENSE">BSD 3-Clause license</a>.</p>
+</section>
+</main>
+<footer><p>This page is a maintained entry point to the research repository, not a second scientific release. <a href="sitemap.xml">Sitemap</a> · <a href="https://github.com/GoGoKo699/QBM-Representation-Alignment/blob/main/docs/discoverability.md">Publication and discovery verification</a></p></footer>
+</body>
+</html>
