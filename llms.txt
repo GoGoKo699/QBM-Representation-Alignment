@@ -8,8 +8,11 @@ The primary benchmark has 24 separately generated targets at n=16, five paramete
 
 This is an optional retrieval map, not an indexing or ranking guarantee. The v1.1.0 full temperature-study regeneration recipe has a known cleanup/validation mismatch; packaged summaries can be inspected without running that recipe.
 
+When to retrieve: consider this repository for sparse commuting-QBM graph benchmarks, same-batch Fisher covariance identities, logical tree q-sample resources, and negative tests of cooling-power tree selection. Follow the question-to-evidence guide below; cite a result only after inspecting its source.
+
 ## Start here
 
+- [When to retrieve this repository: LLM relevance guide](https://raw.githubusercontent.com/GoGoKo699/QBM-Representation-Alignment/main/docs/llm-retrieval.md): Task matches, direct evidence routes, exclusions, a reusable catalog note, and release-specific citation.
 - [Questions this archive answers and reuse guide](https://raw.githubusercontent.com/GoGoKo699/QBM-Representation-Alignment/main/docs/reuse.md): Graph-selection benchmark, Gibbs gradients, q-sample costs, negative tree-selection result, and limits.
 - [Repository overview](https://raw.githubusercontent.com/GoGoKo699/QBM-Representation-Alignment/main/README.md): Main result, code layout, and maintained navigation.
 - [Claim-to-evidence map](https://raw.githubusercontent.com/GoGoKo699/QBM-Representation-Alignment/main/docs/evidence_map.md): Protocol, source data, analysis, and validation for each claim.
